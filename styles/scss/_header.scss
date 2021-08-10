@@ -1,0 +1,79 @@
+//Header Stylings
+
+header {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .wrapper {
+    width: 95%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 1.2rem;
+}
+
+header h2 {
+    font-size: 0.85rem;
+}
+
+header i {
+    font-size: 1.2rem;
+    color: white;
+    padding: 0;
+}
+
+.headingsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.topNavContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    // margin-right: 1.5%;
+    width: 10%;
+    font-size: 0.8rem;
+}
+  
+.topNav {
+    display: none;
+    position: absolute;
+    top: 0.5rem;
+    right: 0;
+    padding: 0.65rem 0;
+    text-align: right;
+}
+  
+.topNavContainer:hover .topNav,
+.topNavContainer:focus .topNav  {
+    display: block;
+}
+
+.topNavContainer ul {
+    list-style-type: none;
+}
+
+.topNavContainer a {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+
+.topNavContainer a:hover,
+.topNavContainer a:focus {
+    border-bottom: 0.2rem solid white;
+    // font-size: 0.8rem;
+}

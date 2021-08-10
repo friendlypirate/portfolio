@@ -1,0 +1,78 @@
+//Footer Stylings
+
+footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .wrapper {
+    width: 95%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: white;
+}
+
+.socialLinks,
+.bottomNavContainer,
+.buttonsContainer {
+    width: calc(100vw / 3);
+    display: flex;
+}
+
+.bottomNavContainer {
+    justify-content: center;
+}
+
+.buttonsContainer {
+    justify-content: flex-end;
+}
+
+
+.socialUl,
+.botNav ul,
+.buttonsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+
+.socialUl a {
+    font-size: 0.6rem;
+    margin-right: 0.2rem
+}
+
+.botNav a {
+    font-size: 1.5rem;
+    padding: 0 0.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.buttonsContainer button {
+    border-radius: 1rem;
+    background-color: black;
+    color: white;
+    border: 0;
+    font-size: 0.65rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 1.5rem;
+    height: 1.5rem;
+    box-shadow: 0 0 3px grey, 0 0 5px white;
+    margin-left: 0.75rem
+}
+

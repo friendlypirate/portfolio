@@ -1,0 +1,84 @@
+//Header Footer and General Styles
+
+@import url('https://fonts.googleapis.com/css2?family=Tinos&display=swap');
+
+* { 
+    margin: 0; 
+    padding: 0;
+}
+
+html {
+    font-size: 20px;
+}
+
+body {
+    font-family: $baseFont;
+    letter-spacing: .05rem;
+    background-color: pink;
+}
+
+header,
+footer,
+main {
+    width: 100vw;
+}
+
+header {
+    height: 20vh;
+}
+
+footer {
+    height: 10vh;
+}
+
+main {
+    height: 70vh;
+    overflow: auto;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    height: 100%;
+}
+
+// .wrapper {
+//     max-width: 992px;
+//     min-width: 440px;
+// }
+
+
+// header .wrapper {
+//     display: flex;
+//     justify-content: center;
+// }
+
+// header .infoButton {
+//     background-color: $accentColorA;
+//     border: none;
+//     margin-left: 0.5rem;
+// }
+
+// header p,
+// footer p {
+//     margin: 0;
+//         a {
+//             font-family: sans-serif, regular;
+//             font-size: 1.2rem;
+//             letter-spacing: 0rem;
+//             text-decoration: none;
+//         }
+//         a:focus,
+//         a:hover {
+//             font-size: 1.4rem;
+//             color: $accentColorE;
+//         }
+// }
+
+// main {
+//     background-color: white;
+// }
+
