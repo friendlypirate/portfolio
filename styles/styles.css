@@ -252,18 +252,22 @@ template {
 
 html {
   font-size: 20px;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Tinos", serif;
   letter-spacing: 0.05rem;
-  background-color: pink;
+  background-color: black;
+  width: 100%;
+  min-width: 320px;
+  overflow: hidden;
 }
 
 header,
 footer,
 main {
-  width: 100vw;
+  width: 100%;
 }
 
 header {
@@ -277,6 +281,9 @@ footer {
 main {
   height: 70vh;
   overflow: auto;
+  scroll-behavior: smooth;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
 }
 
 h1 {
@@ -286,6 +293,7 @@ h1 {
 
 section {
   height: 100%;
+  scroll-snap-align: center;
 }
 
 header {
@@ -490,6 +498,7 @@ footer a {
   font-size: 1.5rem;
   padding: 0 0.2rem;
   margin-bottom: 0.5rem;
+  background-color: transparent;
 }
 
 .buttonsContainer button {
@@ -505,4 +514,9 @@ footer a {
   -webkit-box-shadow: 0 0 3px grey, 0 0 5px white;
           box-shadow: 0 0 3px grey, 0 0 5px white;
   margin-left: 0.75rem;
+}
+
+.botNav .selectedDot {
+  font-size: 3rem;
+  text-shadow: 0 0 3px grey, 0 0 5px white;
 }

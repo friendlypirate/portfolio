@@ -9,18 +9,22 @@
 
 html {
     font-size: 20px;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: $baseFont;
-    letter-spacing: .05rem;
-    background-color: pink;
+    letter-spacing: 0.05rem;
+    background-color: black;
+    width: 100%;
+    min-width: 320px;
+    overflow: hidden;
 }
 
 header,
 footer,
 main {
-    width: 100vw;
+    width: 100%;
 }
 
 header {
@@ -34,6 +38,8 @@ footer {
 main {
     height: 70vh;
     overflow: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
 
 h1 {
@@ -43,6 +49,7 @@ h1 {
 
 section {
     height: 100%;
+    scroll-snap-align: center;
 }
 
 // .wrapper {
