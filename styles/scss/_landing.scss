@@ -1,5 +1,17 @@
 //Landing Section Stylings
 
 .landing {
-    background-color: purple;
+    background-color: $darkMain;
+    height: 100%;
+}
+
+.landingImageContainer {
+    height: 55%;
+    width: 100%;
+}
+
+.landing img {
+    height: 100%;
+    width: 100%;
+    margin-top: 3.5rem;
 }

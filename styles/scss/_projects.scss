@@ -1,5 +1,105 @@
 //Projects Section Stylings
 
 .projects {
-    background-color: grey;
+    background-color: $darkMain;
+    color: white;
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.projects .wrapper {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projects .project {
+    width: 42.5vw;
+    // height: 28vh;
+    background-color: black;
+    margin: 1.5rem 0;
+    font-size: 0.65rem;
+    position: relative;
+}
+
+.projectImgContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.projectImgContainer img {
+    width: 100%;
+    height: 100%;
+}
+
+.projectInfo1 {
+    // display: none;
+    // position: absolute;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    // display: flex;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.75);
+    opacity: 1;
+    display: none;
+    top: 0;
+  
+}
+
+.visible {
+    display: flex;
+    opacity: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.infoUl {
+    display: flex;
+    list-style-type: none;
+}
+
+.infoUl li {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	background-color:#ffffff;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size: 0.5rem;
+	font-weight:bold;
+	padding:0.1rem 0.2rem;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.infoUl li:hover {
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	background-color:#f6f6f6;
+}
+.infoUl li:active {
+	position:relative;
+	top:1px;
+}
+
+     
+
+.closeInfo {
+    color: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    // float: right;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
 }

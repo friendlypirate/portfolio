@@ -1,5 +1,42 @@
 //About Section Styling
 
 .about {
-    background-color: yellow;
+    background-color: $darkMain;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.about .wrapper {
+    width: 95%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 7.5rem;
+}
+
+.aboutText {
+    width: 68%;
+}
+
+.aboutText p {
+    font-size: 0.75rem;
+}
+
+.aboutText h2 {
+    font-size: 1rem;
+}
+
+.aboutImageContainer {
+    width: 30%;
+    min-height: 10vh;
+}
+
+.about img {
+    width: 100%;
 }

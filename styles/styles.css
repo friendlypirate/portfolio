@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Tinos&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -251,14 +252,15 @@ template {
 }
 
 html {
-  font-size: 20px;
+  font-size: 16px;
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Tinos", serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 0.05rem;
-  background-color: black;
+  background-color: #202020;
   width: 100%;
   min-width: 320px;
   overflow: hidden;
@@ -297,7 +299,7 @@ section {
 }
 
 header {
-  background-color: black;
+  background-color: #202020;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -312,7 +314,7 @@ header {
 
 header .wrapper {
   width: 95%;
-  height: 90%;
+  height: 75%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -361,7 +363,7 @@ header i {
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 10%;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 .topNav {
@@ -394,15 +396,197 @@ header i {
 }
 
 .landing {
-  background-color: purple;
+  background-color: #202020;
+  height: 100%;
+}
+
+.landingImageContainer {
+  height: 55%;
+  width: 100%;
+}
+
+.landing img {
+  height: 100%;
+  width: 100%;
+  margin-top: 3.5rem;
 }
 
 .about {
-  background-color: yellow;
+  background-color: #202020;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.about .wrapper {
+  width: 95%;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 7.5rem;
+}
+
+.aboutText {
+  width: 68%;
+}
+
+.aboutText p {
+  font-size: 0.75rem;
+}
+
+.aboutText h2 {
+  font-size: 1rem;
+}
+
+.aboutImageContainer {
+  width: 30%;
+  min-height: 10vh;
+}
+
+.about img {
+  width: 100%;
 }
 
 .projects {
-  background-color: grey;
+  background-color: #202020;
+  color: white;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects .wrapper {
+  width: 95%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects .project {
+  width: 42.5vw;
+  background-color: black;
+  margin: 1.5rem 0;
+  font-size: 0.65rem;
+  position: relative;
+}
+
+.projectImgContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.projectImgContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+.projectInfo1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.75);
+  opacity: 1;
+  display: none;
+  top: 0;
+}
+
+.visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  opacity: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.infoUl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+.infoUl li {
+  -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+          box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #ffffff), to(#f6f6f6));
+  background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  background-color: #ffffff;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  cursor: pointer;
+  color: #666666;
+  font-family: Arial;
+  font-size: 0.5rem;
+  font-weight: bold;
+  padding: 0.1rem 0.2rem;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+
+.infoUl li:hover {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #f6f6f6), to(#ffffff));
+  background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+  background-color: #f6f6f6;
+}
+
+.infoUl li:active {
+  position: relative;
+  top: 1px;
+}
+
+.closeInfo {
+  color: white;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
 }
 
 .skills {
@@ -414,7 +598,7 @@ header i {
 }
 
 footer {
-  background-color: black;
+  background-color: #202020;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;

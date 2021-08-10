@@ -1,9 +1,22 @@
 const buttonPrevious = document.getElementById('previous')
 const buttonNext = document.getElementById('next')
+const buttons = document.querySelectorAll('button')
 const main = document.getElementById('main')
 const body = document.querySelector('body')
 const about = document.querySelector('.about')
 const projects = document.querySelector('.projects')
+
+const img1 = document.querySelector('.img1')
+const projectInfo1 = document.querySelector('.projectInfo1')
+
+img1.addEventListener('click', () => {
+    console.log('hello')
+    projectInfo1.classList.add('visible')
+})
+
+window.addEventListener('click', (e) => {
+    console.log(e)
+})
 
 
 
@@ -39,11 +52,22 @@ const projects = document.querySelector('.projects')
 //     }
 //     requestAnimationFrame(animation)
 // }
+// console.log(buttons)
 
-buttonNext.addEventListener('click', () => {
-    console.log("hello")
-    // pageScroll('.landing', '.about', 1250)
-})
+buttons.forEach(x => x.addEventListener('click', () => {
+    x.id === 'next' ? main.scrollBy(0, (70 * window.innerHeight/100)) : main.scrollBy(0, (-70 * window.innerHeight/100))
+}))
+// buttonNext.addEventListener('click', () => {
+    
+// //         const ease = (t, b, c, d) => {
+// //         return -c * (t /= d) * (t - 2) + b;
+// //     }
+// //     requestAnimationFrame(animation)
+// // }
+//     // (70 * window.innerHeight/100)
+//     main.scrollBy(0, (70 * window.innerHeight/100))
+//     // pageScroll('.landing', '.about', 1250)
+// })
 
 // about.addEventListener('scroll', (e) => {
 //     console.log(e.target.tagName)
@@ -59,8 +83,6 @@ buttonNext.addEventListener('click', () => {
 
 
 const sections = document.querySelectorAll('.section')
-console.log(sections[0].id)
-sections.forEach(x => console.log(x.id))
 
 
 // main.addEventListener('scroll', function(section) {
@@ -85,12 +107,12 @@ sections.forEach(x => main.addEventListener('scroll', () => {
     
 	// checking whether fully visible
 	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-		console.log(element + ' is fully visible in screen');
+		// console.log(element + ' is fully visible in screen');
         botNavDots.forEach(y => {
             // console.log(y)
             // console.log(element)
             // console.log('this is working')
-            if (y.classList.contains(x.id)) {
+            if (y.classList.contains(x.id + 'Nav')) {
                 botNavDots.forEach(z => {
                     z.classList.remove('selectedDot')
                 })

@@ -1,6 +1,7 @@
 //Header Footer and General Styles
 
 @import url('https://fonts.googleapis.com/css2?family=Tinos&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * { 
     margin: 0; 
@@ -8,14 +9,15 @@
 }
 
 html {
-    font-size: 20px;
+    font-size: 16px;
+    text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
     scroll-behavior: smooth;
 }
 
 body {
     font-family: $baseFont;
     letter-spacing: 0.05rem;
-    background-color: black;
+    background-color: #202020;
     width: 100%;
     min-width: 320px;
     overflow: hidden;
