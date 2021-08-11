@@ -1,8 +1,8 @@
 //Header Stylings
 
 header {
-    background-color: $darkMain;
-    color: white;
+    // background-color: $darkMain;
+    // color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,9 +24,15 @@ header h2 {
 }
 
 header i {
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     color: white;
     padding: 0;
+    text-shadow: 0 0 1.5px grey, 0 0 2.5px white;
+}
+
+header i:focus,
+header i:active {
+    color: $darkMain;
 }
 
 .headingsContainer {
@@ -71,9 +77,17 @@ header i {
     background-color: transparent;
 }
 
+.topNavContainer li {
+    margin-top: 0.25rem;
+}
+
+.topNavContainer li:first-child {
+    margin-top: 0.5rem
+}
+
 
 .topNavContainer a:hover,
 .topNavContainer a:focus {
-    border-bottom: 0.2rem solid white;
     // font-size: 0.8rem;
+    text-shadow: 0 0 3px grey, 0 0 5px white;
 }

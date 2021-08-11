@@ -1,6 +1,6 @@
-const buttonPrevious = document.getElementById('previous')
-const buttonNext = document.getElementById('next')
-const buttons = document.querySelectorAll('button')
+// const buttonPrevious = document.getElementById('previous')
+// const buttonNext = document.getElementById('next')
+const buttons = document.querySelectorAll('.navButton')
 const main = document.getElementById('main')
 const body = document.querySelector('body')
 const about = document.querySelector('.about')
@@ -9,96 +9,56 @@ const projects = document.querySelector('.projects')
 const img1 = document.querySelector('.img1')
 const projectInfo1 = document.querySelector('.projectInfo1')
 
-img1.addEventListener('click', () => {
-    console.log('hello')
-    projectInfo1.classList.add('visible')
+// window.addEventListener('click', (e) => {
+//     console.log(e)
+// })
+
+//Overlay 
+const closeInfoButtons = [1, 2, 3, 4]
+
+closeInfoButtons.forEach(x => {
+    let projectNum = '.projectInfo' + x
+    document.querySelector('.img' + x).onclick = () => {
+        document.querySelector(projectNum).classList.add('visible')
+    }
+    document.querySelector('.closeInfo' + x).onclick = () => {
+        document.querySelector(projectNum).classList.remove('visible')
+    }
 })
 
-window.addEventListener('click', (e) => {
-    console.log(e)
-})
+//Projects Carousel 
+const carousel = () => {
+    let projects = document.querySelectorAll('.project');
+    let carouselPosition = 0;
+    let totalProjects = projects.length;
+    hideAllProjects = () => {
+        for (let project of projects) {
+            project.classList.remove('projectVisible');
+            // pic.classList.add('carouselPicHidden');
+        }
+    }
+    
+    moveToNextProject = (e) => {
+       hideAllProjects()
+        e.target.id == 'carouselNext'
+        ? carouselPosition  == totalProjects - 1 ? carouselPosition  = 0 : carouselPosition ++
+        : carouselPosition  === 0 ? carouselPosition  = totalProjects - 1 : carouselPosition --
+        projects[carouselPosition].classList.add("projectVisible");
+    }
+    
+    Array.from(document.querySelectorAll('.moveCarousel')).map(x => x.addEventListener('click', moveToNextProject))
+}
+
+carousel()
 
 
 
-// const pageScroll = (startingTarget, target, duration) => {
-//     console.log('its running')
-//     let targetSection = document.querySelector(target)
-//     let startingSection = document.querySelector(startingTarget)
-    // let targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset
-
-    // let startPosition = window.pageYOffset
-    // let startPosition = startingSection.offsetTop - (20 * window.innerHeight/100)
-    // console.log(startPosition)
-    // let startPosition = startingSection.getBoundingClientRect().top + window.pageYOffset
-    // let distance = targetPosition - startPosition
-    // let startTime = null
-
-    // console.log(distance, startPosition, targetPosition)
-
-//     const animation = (currentTime) => {
-//         if (startTime === null) {
-//             startTime = currentTime
-//         }
-//         let timeElapsed = currentTime - startTime
-//         const run = ease(timeElapsed, startPosition, (70 * window.innerHeight/100), duration)
-//         main.scrollTo(0, run)
-//         if (timeElapsed < duration) {
-//             requestAnimationFrame(animation)
-//         }
-//     }
-
-//     const ease = (t, b, c, d) => {
-//         return -c * (t /= d) * (t - 2) + b;
-//     }
-//     requestAnimationFrame(animation)
-// }
-// console.log(buttons)
+//Smooth Scroll with Nav Buttons Highlighting
+const sections = document.querySelectorAll('.section')
 
 buttons.forEach(x => x.addEventListener('click', () => {
     x.id === 'next' ? main.scrollBy(0, (70 * window.innerHeight/100)) : main.scrollBy(0, (-70 * window.innerHeight/100))
 }))
-// buttonNext.addEventListener('click', () => {
-    
-// //         const ease = (t, b, c, d) => {
-// //         return -c * (t /= d) * (t - 2) + b;
-// //     }
-// //     requestAnimationFrame(animation)
-// // }
-//     // (70 * window.innerHeight/100)
-//     main.scrollBy(0, (70 * window.innerHeight/100))
-//     // pageScroll('.landing', '.about', 1250)
-// })
-
-// about.addEventListener('scroll', (e) => {
-//     console.log(e.target.tagName)
-// })
-
-// var observer = new IntersectionObserver(function(entries) {
-
-// 	if(entries[0].isIntersecting === true)
-// 		console.log(entries[0].target.id);
-// }, { threshold: [0.49] });
-
-// observer.observe(document.querySelector('.projects'))
-
-
-const sections = document.querySelectorAll('.section')
-
-
-// main.addEventListener('scroll', function(section) {
-    
-// 	var element = document.querySelector("." + sections[3].id);
-// 	var position = element.getBoundingClientRect();
-// 	// checking whether fully visible
-// 	if(position.top >= 0 && position.bottom <= window.innerHeight) {
-// 		console.log(element + ' is fully visible in screen');
-//         console.log(element.id)
-// 	}
-// 	// checking for partial visibility
-// 	// if(position.top < window.innerHeight && position.bottom >= 0) {
-// 	// 	console.log('Element is partially visible in screen');
-// 	// }
-// });
 
 sections.forEach(x => main.addEventListener('scroll', () => {
     const botNavDots = document.querySelectorAll('.botNavDots')

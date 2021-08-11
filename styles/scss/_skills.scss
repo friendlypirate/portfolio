@@ -1,5 +1,30 @@
 //Skills Section Stylings  
 
 .skills {
-    background-color: red;
+    background-color: $darkMain;
+    color: white;
+    overflow: auto;
+}
+
+.skills .wrapper {
+    width: 95%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.skills ul {
+    list-style-type: none;
+    display: flex;
+    font-size: 2.5rem;
+    width: 100%;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.skills li {
+    padding: 1.75rem;
+    width: 33%;
 }

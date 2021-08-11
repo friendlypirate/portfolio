@@ -17,10 +17,11 @@ html {
 body {
     font-family: $baseFont;
     letter-spacing: 0.05rem;
-    background-color: #202020;
+    background-color: $darkMain;
     width: 100%;
     min-width: 320px;
     overflow: hidden;
+    color: white;
 }
 
 header,

@@ -51,9 +51,19 @@ footer a {
     height: 100%;
 }
 
+.socialUl li {
+    list-style-type: none;
+    padding-right: 0.8rem;
+}
+
 .socialUl a {
-    font-size: 0.6rem;
-    margin-right: 0.2rem
+    font-size: 0.75rem;
+}
+
+.socialUl a:focus,
+.socialUl a:hover,
+.socialUl a:active {
+    text-shadow: 0 0 3px grey, 0 0 5px white;
 }
 
 .botNav a {
