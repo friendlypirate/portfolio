@@ -255,6 +255,7 @@ html {
   font-size: 14px;
   text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
   scroll-behavior: smooth;
+  height: -webkit-fill-available;
 }
 
 body {
