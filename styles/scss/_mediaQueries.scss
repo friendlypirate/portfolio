@@ -1,7 +1,121 @@
-// @media (max-width: 768px) {
-//     html {
-//         font-size: 16px;
-//     }
+//Media Queries
+
+//Font Sizes
+@media (min-width: 450px) {
+    html {
+        font-size: 14.5px;
+    }
+}
+
+@media (min-width: 576px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 992px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 19.5px;
+    }
+}
+
+//Mobile to Tablet/Desktop
+
+@media (min-width: 768px) {
+    html {
+        font-size: 17px;
+    }
+    //General Stylings
+    body {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    header {
+        width: 20vw;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    main {
+        width: 70vw;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    footer {
+        width: 10vw;
+        height: 100vh;
+        // display: flex;
+        // flex-direction: column;
+    }
+
+    //Footer Section
+
+    
+
+    footer .wrapper {
+        width: 90%;
+        height: 96%;
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+        align-items: center;
+    }
+
+    .socialLinks,
+    .bottomNavContainer,
+    .buttonsContainer {
+        width: 100%;
+        height: calC(100% / 3)
+    }
+
+    .socialLinks {
+        display: flex; 
+        justify-content: center;
+    }
+
+    // .bottomNavContainer {
+    //     display: flex;
+    //     flex-direction: column;
+    // }
+
+    .botNav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .socialUl {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .socialUl li {
+        padding: 0
+    }
+
+    .botNav .selectedDot {
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
 
 //     .loadingHeadings h2 {
 //         padding-top: 3rem;

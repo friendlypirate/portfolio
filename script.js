@@ -13,6 +13,8 @@ const projectInfo1 = document.querySelector('.projectInfo1')
 //     console.log(e)
 // })
 
+//Projects Page JS//
+
 //Overlay 
 const closeInfoButtons = [1, 2, 3, 4]
 
