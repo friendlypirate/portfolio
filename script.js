@@ -5,6 +5,16 @@ const projectInfo1 = document.querySelector('.projectInfo1')
 const closeInfoButtons = [1, 2, 3, 4, 5, 6]
 const sections = document.querySelectorAll('.section')
 
+//Mobile Vh Sizing Issue
+function resize() {
+    // We execute the same script as before
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  }
+
+window.addEventListener('resize', resize);
+window.addEventListener('load', resize);
+
 //Overlay 
 closeInfoButtons.forEach(x => {
     let projectNum = '.projectInfo' + x
@@ -64,6 +74,6 @@ sections.forEach((x, index) => main.addEventListener('scroll', () => {
 
 //Theme Changer
 
-document.querySelector('.theme').onclick = () => {
-    document.querySelector('body').classList.toggle('lightMode')
-}
+// document.querySelector('.theme').onclick = () => {
+//     document.querySelector('body').classList.toggle('lightMode')
+// }
