@@ -267,6 +267,8 @@ body {
   overflow: hidden;
   color: white;
   opacity: 0.9;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   height: calc(var(--vh, 1vh) * 100);
 }
 
@@ -474,9 +476,9 @@ header i:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .aboutContainer {
@@ -833,9 +835,9 @@ header i:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   margin: 5.5rem auto 3.5rem auto;
 }
 
