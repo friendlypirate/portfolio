@@ -265,6 +265,7 @@ body {
   min-width: 320px;
   overflow: hidden;
   color: white;
+  opacity: 0.9;
 }
 
 header,
@@ -309,6 +310,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  letter-spacing: 0.075rem;
 }
 
 header .wrapper {
@@ -323,11 +325,13 @@ header .wrapper {
 }
 
 header h1 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  padding-bottom: 0.25rem;
 }
 
 header h2 {
-  font-size: 0.85rem;
+  font-size: 1rem;
+  opacity: 0.6;
 }
 
 header i {
@@ -353,6 +357,10 @@ header i:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.headingsContainer p {
+  font-size: 0.75rem;
 }
 
 .topNavContainer {
@@ -406,6 +414,17 @@ header i:active {
 .topNavContainer a:hover,
 .topNavContainer a:focus {
   text-shadow: 0 0 3px grey, 0 0 5px white;
+}
+
+.pageHeading {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+
+.pageHeadingDesktop {
+  display: none;
 }
 
 .landing {
@@ -1016,7 +1035,7 @@ footer a {
   }
 
   main {
-    width: 62.5vw;
+    width: 67vw;
     height: 100vh;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1025,7 +1044,7 @@ footer a {
   }
 
   footer {
-    width: 10vw;
+    width: 5.5vw;
     height: 100vh;
   }
 
@@ -1039,10 +1058,6 @@ footer a {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
   }
 
   header .headingsContainer {
@@ -1055,26 +1070,23 @@ footer a {
   }
 
   header h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 
   header h2 {
-    font-size: 1rem;
+    margin-top: 0.3rem;
+    font-size: 0.925rem;
   }
 
   .topNavContainer {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
 
   .topNav {
-    text-align: left;
-    width: 100%;
+    top: 0;
+    left: 0;
   }
 
   .topNav ul {
@@ -1091,7 +1103,18 @@ footer a {
   }
 
   .topNav li {
-    margin: 0;
+    padding: 0.2rem 0 0 0;
+  }
+
+  .topNav ul:first-child {
+    padding-top: 0.35rem;
+  }
+
+  .pageHeading {
+    display: block;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
   }
 
   footer .wrapper {
@@ -1117,9 +1140,9 @@ footer a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .socialUl {
@@ -1130,19 +1153,20 @@ footer a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+  }
+
+  .socialUl a {
+    font-size: 0.625rem;
   }
 
   .socialUl li {
-    padding: 0 0 0.25rem 0;
+    padding: 0 0 0.45rem 0;
   }
 
   .bottomNavContainer {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .botNav ul {
@@ -1176,9 +1200,6 @@ footer a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
   }
 
   .buttonsContainer button {
@@ -1200,6 +1221,7 @@ footer a {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    margin-right: 5vw;
   }
 
   .landing .landingImg1 {
@@ -1232,4 +1254,8 @@ footer a {
   html {
     font-size: 19px;
   }
+}
+.lightMode {
+  background-color: white;
+  color: #110f10;
 }

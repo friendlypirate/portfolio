@@ -43,8 +43,9 @@ buttons.forEach(x => x.addEventListener('click', () => {
     x.id === 'next' ? main.scrollBy(0, (70 * window.innerHeight/100)) : main.scrollBy(0, (-70 * window.innerHeight/100))
 }))
 
-//Add event listeners to figure out when Sections are visible, changes the dot navigation accordingly
-sections.forEach(x => main.addEventListener('scroll', () => {
+//Add event listeners to figure out when Sections are visible, changes the dot navigation accordingly and header page indicator
+sections.forEach((x, index) => main.addEventListener('scroll', () => {
+    const pageHeading = document.querySelector('.pageHeading')
     const botNavDots = document.querySelectorAll('.botNavDots')
     var element = document.querySelector("." + x.id);
 	var position = element.getBoundingClientRect();
@@ -55,7 +56,14 @@ sections.forEach(x => main.addEventListener('scroll', () => {
                     z.classList.remove('selectedDot')
                 })
                 y.classList.add('selectedDot')
+                pageHeading.textContent = `0${index + 1} - ${x.id}`
             }
         })
 	}
 }))
+
+//Theme Changer
+
+document.querySelector('.theme').onclick = () => {
+    document.querySelector('body').classList.toggle('lightMode')
+}

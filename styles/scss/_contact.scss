@@ -7,27 +7,17 @@
 
 .contact .wrapper {
     width: 95%;
-    // height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // align-items: flex-end;
     margin: 5.5rem auto 3.5rem auto;
 }
-
-// .contactText h2 {
-//     font-size: 0.85rem;
-// }
 
 .contactText p {
     font-size: 0.825rem;
     margin-bottom: 2.5rem;
     padding-right: 2.5rem;
 }
-
-// .contactsContainer {
-//     display: flex;
-// }
 
 .contactsContainer div {
     margin-top: 2.25rem;
@@ -41,7 +31,6 @@
 .contactsContainer p {
     font-size: 0.65rem;
     margin-bottom: 0.15rem;
-    // margin: 0.1rem 0.5re
 }
 
 .contact ul {
@@ -66,8 +55,4 @@
 .contact li:focus {
     text-shadow: 0 0 3px grey, 0 0 5px white;
 }
-
-// .contact li:last-child {
-//     font-size: 0.8rem;
-// }
 
