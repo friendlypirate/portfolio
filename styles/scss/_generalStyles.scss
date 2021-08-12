@@ -1,0 +1,94 @@
+//Header Footer and General Styles
+
+@import url('https://fonts.googleapis.com/css2?family=Tinos&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* { 
+    margin: 0; 
+    padding: 0;
+}
+
+html {
+    font-size: 14px;
+    text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $baseFont;
+    letter-spacing: 0.05rem;
+    background-color: $darkMain;
+    width: 100%;
+    min-width: 320px;
+    overflow: hidden;
+    color: white;
+}
+
+header,
+footer,
+main {
+    width: 100%;
+}
+
+header {
+    height: 20vh;
+}
+
+footer {
+    height: 10vh;
+}
+
+main {
+    height: 70vh;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    height: 100%;
+    scroll-snap-align: center;
+}
+
+// .wrapper {
+//     max-width: 992px;
+//     min-width: 440px;
+// }
+
+
+// header .wrapper {
+//     display: flex;
+//     justify-content: center;
+// }
+
+// header .infoButton {
+//     background-color: $accentColorA;
+//     border: none;
+//     margin-left: 0.5rem;
+// }
+
+// header p,
+// footer p {
+//     margin: 0;
+//         a {
+//             font-family: sans-serif, regular;
+//             font-size: 1.2rem;
+//             letter-spacing: 0rem;
+//             text-decoration: none;
+//         }
+//         a:focus,
+//         a:hover {
+//             font-size: 1.4rem;
+//             color: $accentColorE;
+//         }
+// }
+
+// main {
+//     background-color: white;
+// }
+

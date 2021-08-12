@@ -1,0 +1,23 @@
+//Landing Section Stylings
+
+.landing {
+    background-color: $darkMain;
+    height: 100%;
+    overflow: auto;
+}
+
+.landingImageContainer {
+    // height: 55%;
+    width: 100%;
+    // max-width: 600px;
+}
+
+.landing img {
+    height: 100%;
+    width: 100%;
+    margin-top: 3.5rem;
+}
+
+.landingImg2 {
+    display: none;
+}

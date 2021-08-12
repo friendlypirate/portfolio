@@ -1,0 +1,93 @@
+//Header Stylings
+
+header {
+    // background-color: $darkMain;
+    // color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .wrapper {
+    width: 95%;
+    height: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 1.2rem;
+}
+
+header h2 {
+    font-size: 0.85rem;
+}
+
+header i {
+    font-size: 1.35rem;
+    color: white;
+    padding: 0;
+    text-shadow: 0 0 1.5px grey, 0 0 2.5px white;
+}
+
+header i:focus,
+header i:active {
+    color: $darkMain;
+}
+
+.headingsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.topNavContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    // margin-right: 1.5%;
+    width: 10%;
+    font-size: 0.7rem;
+}
+  
+.topNav {
+    display: none;
+    position: absolute;
+    top: 0.5rem;
+    right: 0;
+    padding: 0.65rem 0;
+    text-align: right;
+}
+  
+.topNavContainer:hover .topNav,
+.topNavContainer:focus .topNav  {
+    display: block;
+}
+
+.topNavContainer ul {
+    list-style-type: none;
+}
+
+.topNavContainer a {
+    color: white;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.topNavContainer li {
+    margin-top: 0.235rem;
+}
+
+.topNavContainer li:first-child {
+    margin-top: 0.5rem
+}
+
+
+.topNavContainer a:hover,
+.topNavContainer a:focus {
+    // font-size: 0.8rem;
+    text-shadow: 0 0 3px grey, 0 0 5px white;
+}
