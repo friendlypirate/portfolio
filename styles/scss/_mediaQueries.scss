@@ -1,5 +1,4 @@
 //Media Queries
-
 //Font Sizes
 @media (min-width: 450px) {
     html {
@@ -13,24 +12,6 @@
     }
 }
 
-@media (min-width: 768px) {
-    html {
-        font-size: 17px;
-    }
-}
-
-@media (min-width: 992px) {
-    html {
-        font-size: 18px;
-    }
-}
-
-@media (min-width: 1200px) {
-    html {
-        font-size: 19.5px;
-    }
-}
-
 //Mobile to Tablet/Desktop
 
 @media (min-width: 768px) {
@@ -40,17 +21,17 @@
     //General Stylings
     body {
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
     }
 
     header {
-        width: 20vw;
+        width: 37.5vw;
         height: 100vh;
         flex-direction: column;
     }
 
     main {
-        width: 70vw;
+        width: 62.5vw;
         height: 100vh;
         flex-direction: column;
     }
@@ -62,17 +43,74 @@
         // flex-direction: column;
     }
 
-    //Footer Section
+    //Header Section
+
+    header .wrapper {
+        width: 90%;
+        height: 94%;
+        display: flex;
+        flex-direction: column-reverse;
+        // justify-content: space-between;
+        align-items: center;
+        position: relative;
+        
+    }
+
+    header .headingsContainer {
+        flex-direction: column-reverse;
+        height: 60%;
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header h2 {
+        font-size: 1rem;
+    }
+
+    .topNavContainer {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    // .topNavContainer i {
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    // }
+    
+    .topNav {
+        text-align: left;
+        width: 100%;
+        // top: 0;
+        // left: 0;
+    }
 
     
 
+    .topNav ul {
+        display: flex; 
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .topNav li {
+        margin: 0;
+    }
+
+    //Footer Section
+
+
     footer .wrapper {
-        width: 90%;
-        height: 96%;
+        width: 70%;
+        height: 94%;
         display: flex;
         flex-direction: column;
         // justify-content: space-between;
-        align-items: center;
+        // align-items: flex-end;
     }
 
     .socialLinks,
@@ -84,37 +122,99 @@
 
     .socialLinks {
         display: flex; 
-        justify-content: center;
-    }
-
-    // .bottomNavContainer {
-    //     display: flex;
-    //     flex-direction: column;
-    // }
-
-    .botNav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
+        justify-content: flex-end;
     }
 
     .socialUl {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-end;
     }
 
     .socialUl li {
-        padding: 0
+        padding: 0 0 0.25rem 0;
+    }
+
+    .bottomNavContainer {
+        justify-content: flex-end;
+    }
+    
+    .botNav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botNav a {
+        line-height: 2rem;
     }
 
     .botNav .selectedDot {
         margin: 0;
         padding: 0;
+        font-size: 3rem;
     }
 
+    .buttonsContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .buttonsContainer button {
+        margin: 0.8rem 0 0 0;
+        
+    }
+
+    //Landings Section
+    .landing {
+        width: 100%;
+        // height: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .landing .landingImageContainer {
+        height: inherit;
+        width: fit-content;
+    }
+
+    .landing .landingImg1 {
+        display: none;
+    }
+
+    .landing .landingImg2 {
+        display: block;
+        // width: 100%;
+        // height: 100%;
+        margin: 0;
+    }
+
+    //About Section
+
+    .about .wrapper {
+        justify-content: space-evenly;
+    }
+
+    //Contact Section {
+    
+    .contact .wrapper {
+        justify-content: space-evenly;
+    }
 }
+
+@media (min-width: 992px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 19px;
+    }
+}
+
 
 
 //     .loadingHeadings h2 {

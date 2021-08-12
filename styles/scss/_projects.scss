@@ -163,7 +163,24 @@
     text-shadow: 0 0 3px grey, 0 0 5px white;
 }
 
-.infoUl li,
+.infoUl li {
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	background-color:#ededed;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#777777;
+	font-family:Arial;
+	font-size:0.5rem;
+	font-weight:bold;
+	padding:0.15rem 0.3rem;
+    margin: 0 0.2rem;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+
 .project a {
 	box-shadow:inset 0px 1px 3px 0px #91b8b3;
 	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
