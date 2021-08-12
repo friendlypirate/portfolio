@@ -6,6 +6,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    letter-spacing: 0.075rem;
 }
 
 header .wrapper {
@@ -13,14 +14,17 @@ header .wrapper {
     height: 75%;
     display: flex;
     justify-content: space-between;
+    // align-content: flex-end;
 }
 
 header h1 {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    padding-bottom: 0.25rem;
 }
 
 header h2 {
-    font-size: 0.85rem;
+    font-size: 1rem;
+    opacity: 0.6;
 }
 
 header i {
@@ -41,7 +45,23 @@ header i:active {
     justify-content: space-between;
 }
 
+.headingsContainer p {
+    font-size: 0.75rem;
+}
 
+// .logo {
+//     width: 100%;
+// }
+
+// .logo img {
+//     width: 5%;
+// }
+
+// .headerHeadings {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-end;
+// }
 
 .topNavContainer {
     position: relative;
@@ -85,9 +105,20 @@ header i:active {
     margin-top: 0.5rem
 }
 
-
 .topNavContainer a:hover,
 .topNavContainer a:focus {
     // font-size: 0.8rem;
     text-shadow: 0 0 3px grey, 0 0 5px white;
+}
+
+.pageHeading {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.6;
+    text-transform: uppercase;
+    
+}
+
+.pageHeadingDesktop {
+    display: none;
 }
