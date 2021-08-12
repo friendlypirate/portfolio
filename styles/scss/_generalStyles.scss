@@ -23,6 +23,8 @@ body {
     overflow: hidden;
     color: white;
     opacity: 0.9;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
 }
 
 header,
