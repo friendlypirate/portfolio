@@ -83,6 +83,15 @@ main {
     scroll-snap-type: y mandatory;
 }
 
+main::-webkit-scrollbar {
+    display: none;
+}
+
+main {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 h1 {
     margin: 0;
     padding: 0;
