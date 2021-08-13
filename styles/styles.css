@@ -266,7 +266,6 @@ body {
   min-width: 320px;
   overflow: hidden;
   color: white;
-  opacity: 0.9;
   min-height: 100vh;
   min-height: -webkit-fill-available;
   height: calc(var(--vh, 1vh) * 100);
@@ -347,16 +346,32 @@ header h2 {
   opacity: 0.6;
 }
 
-header i {
+header i,
+.closeTopNav {
   font-size: 1.35rem;
   color: white;
   padding: 0;
   text-shadow: 0 0 1.5px grey, 0 0 2.5px white;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: none;
 }
 
 header i:focus,
-header i:active {
+header i:active,
+.closeTopNav:focus,
+.closeTopNav:active {
   color: #202020;
+}
+
+.closeTopNav {
+  font-size: 1.65rem;
+  z-index: 10;
+}
+
+.closeTopNav:hover {
+  cursor: default;
 }
 
 .headingsContainer {
@@ -376,6 +391,10 @@ header i:active {
   font-size: 0.75rem;
 }
 
+.headingsContainer h3 {
+  margin-top: 0.3rem;
+}
+
 .topNavContainer {
   position: relative;
   display: -webkit-box;
@@ -393,17 +412,20 @@ header i:active {
 }
 
 .topNav {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
   top: 0.5rem;
   right: 0;
   padding: 0.65rem 0;
   text-align: right;
+  -webkit-transition: display 0s, opacity 0.5s linear;
+  transition: display 0s, opacity 0.5s linear;
 }
 
-.topNavContainer:hover .topNav,
-.topNavContainer:focus .topNav {
-  display: block;
+.topNavVisible {
+  visibility: visible;
+  opacity: 1;
 }
 
 .topNavContainer ul {
@@ -417,7 +439,7 @@ header i:active {
 }
 
 .topNavContainer li {
-  margin-top: 0.235rem;
+  margin-top: 0.35rem;
 }
 
 .topNavContainer li:first-child {
@@ -524,11 +546,14 @@ header i:active {
 .aboutText p {
   font-size: 0.7rem;
   line-height: 1rem;
+  opacity: 0.875;
 }
 
 .aboutText h2 {
-  font-size: 1rem;
+  font-size: 0.8rem;
   padding-bottom: 0.5rem;
+  text-transform: uppercase;
+  opacity: 0.875;
 }
 
 .aboutImageContainer {
@@ -841,6 +866,13 @@ header i:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.contact p,
+.contact h3,
+.contact a,
+.contat span {
+  opacity: 0.875;
 }
 
 .contact .wrapper {
@@ -1370,6 +1402,15 @@ footer a {
 @media (min-width: 1200px) {
   html {
     font-size: 19px;
+  }
+}
+@supports (-webkit-touch-callout: none) {
+  header i {
+    display: none;
+  }
+
+  .topNav {
+    display: none;
   }
 }
 .lightMode {

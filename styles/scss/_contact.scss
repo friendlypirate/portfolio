@@ -5,6 +5,13 @@
     display: flex; 
 }
 
+.contact p, 
+.contact h3,
+.contact a,
+.contat span {
+    opacity: 0.875;
+}
+
 .contact .wrapper {
     width: 95%;
     display: flex;
