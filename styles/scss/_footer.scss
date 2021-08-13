@@ -83,8 +83,31 @@ footer a {
     cursor: pointer;
     width: 1.5rem;
     height: 1.5rem;
+    margin-left: 0.75rem;
+    transition: box-shadow 0.3s ease-in-out 0s;
+
+}
+
+.buttonsContainer .useable {
     box-shadow: 0 0 3px grey, 0 0 5px white;
-    margin-left: 0.75rem
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+        box-shadow: 0 0 3px grey, 0 0 5px white;
+	}
+
+	70% {
+		transform: scale(1);
+        box-shadow: 0 0 3px grey, 0 0 5px white;
+	}
+
+	100% {
+		transform: scale(0.95);
+        box-shadow: 0 0 3px grey, 0 0 5px white;
+	}
 }
 
 .botNav .selectedDot {
