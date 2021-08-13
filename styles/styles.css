@@ -459,8 +459,14 @@ header i:active,
   text-transform: uppercase;
 }
 
-.pageHeadingDesktop {
+.logo {
   display: none;
+  width: 4.5rem;
+  opacity: 0.6;
+}
+
+.logoMobile {
+  width: 1.5rem;
 }
 
 .landing {
@@ -1268,6 +1274,14 @@ footer a {
     font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
+  }
+
+  .logo {
+    display: block;
+  }
+
+  .headerHeadings {
+    margin-top: -2rem;
   }
 
   footer .wrapper {
