@@ -294,6 +294,15 @@ main {
       scroll-snap-type: y mandatory;
 }
 
+main::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 h1 {
   margin: 0;
   padding: 0;
@@ -444,7 +453,7 @@ header i:active {
 .landing img {
   height: 100%;
   width: 100%;
-  margin-top: 3.5rem;
+  margin-top: 7rem;
 }
 
 .landingImg2 {
@@ -990,6 +999,7 @@ footer a {
   padding: 0 0.2rem;
   margin-bottom: 0.5rem;
   background-color: transparent;
+  opacity: 0.5;
 }
 
 .buttonsContainer button {
@@ -1012,8 +1022,8 @@ footer a {
 .buttonsContainer .useable {
   -webkit-box-shadow: 0 0 3px grey, 0 0 5px white;
           box-shadow: 0 0 3px grey, 0 0 5px white;
-  -webkit-animation: pulse 2s infinite;
-          animation: pulse 2s infinite;
+  -webkit-animation: pulse 3.5s infinite;
+          animation: pulse 3.5s infinite;
 }
 
 @-webkit-keyframes pulse {
@@ -1058,10 +1068,54 @@ footer a {
   }
 }
 .botNav .selectedDot {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-shadow: 0 0 3px grey, 0 0 5px white;
+  -webkit-animation: pulseDot 4s infinite;
+          animation: pulseDot 4s infinite;
+  opacity: 1;
 }
 
+@-webkit-keyframes pulseDot {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    text-shadow: 0 0 3px grey, 0 0 5px white;
+    opacity: 0.75;
+  }
+  70% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    text-shadow: 0 0 3px grey, 0 0 5px white;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    text-shadow: 0 0 3px grey, 0 0 5px white;
+    opacity: 0.75;
+  }
+}
+
+@keyframes pulseDot {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    text-shadow: 0 0 3px grey, 0 0 5px white;
+    opacity: 0.75;
+  }
+  70% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    text-shadow: 0 0 3px grey, 0 0 5px white;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    text-shadow: 0 0 3px grey, 0 0 5px white;
+    opacity: 0.75;
+  }
+}
 @media (min-width: 450px) {
   html {
     font-size: 14.5px;
