@@ -26,6 +26,7 @@ body {
     min-height: 100vh;
     min-height: -webkit-fill-available;
     height: calc(var(--vh, 1vh) * 100);
+    max-width: 1450px;
     // height: 100vh;
     // background-image: url(../assets/fpLogo.jpg);
     // background-size:contain;
