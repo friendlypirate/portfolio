@@ -76,6 +76,42 @@ sections.forEach((x, index) => main.addEventListener('scroll', () => {
     }
 }))
 
+//Open Close Hamburger menu
+
+const hamburger = () => {
+    let topNav = document.querySelector('.topNav')
+    let openTopNav = document.querySelector('.openTopNav')
+    let closeTopNav = document.querySelector('.closeTopNav')
+    let navItems = Array.from(document.querySelectorAll('.topNavList'))
+
+    openTopNav.addEventListener('click', (e) => {
+        console.log("clicked I")
+        // topNav.style.display = "block"
+        openTopNav.style.display = "none"
+        closeTopNav.style.display = "block"
+        // openTopNav.classList.remove('topNavButtonVisible')
+        // closeTopNav.classList.add('topNavButtonVisible')
+        topNav.classList.add('topNavVisible')
+
+    })
+    closeTopNav.addEventListener('click', (e) => {
+        console.log("clicked X")
+        // topNav.style.display = "none"
+        openTopNav.style.display = "block"
+        closeTopNav.style.display = "none"
+        // openTopNav.classList.add('topNavButtonVisible')
+        // closeTopNav.classList.remove('topNavButtonVisible')
+        topNav.classList.remove('topNavVisible')
+    })
+    navItems.map(x => x.addEventListener('click', () => {
+        // topNav.style.display = "none"
+        openTopNav.style.display = "block"
+        closeTopNav.style.display = "none"
+        topNav.classList.remove('topNavVisible')
+    }))
+}
+hamburger()
+
 //Theme Changer
 
 // document.querySelector('.theme').onclick = () => {

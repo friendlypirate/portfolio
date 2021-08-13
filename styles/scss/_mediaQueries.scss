@@ -188,32 +188,6 @@
         width: auto;
     }
 
-    // .landing {
-        // width: 100%;
-        // display: flex;
-        // justify-content: flex-end;
-        // align-items: flex-start;
-        // flex-direction: column;
-
-    // }
-
-    // .landing .landingImageContainer {
-    //     display: flex;
-    //     flex-direction: row;
-    //     width:fit-content;
-    //     margin-right: 5vw;
-
-
-        // align-items: flex-start;
-        // height: instrinsic;
-        // width: auto;
-        // min-width: none;
-    // }
-
-    // .landing img {
-   
-    // }
-
     .landing .landingImg1 {
         display: none;
     }
@@ -247,3 +221,15 @@
         font-size: 19px;
     }
 }
+
+//Hide Hamburger Menu on IOS devices
+
+@supports (-webkit-touch-callout: none) {
+    header i {
+        display: none
+    }
+    
+    .topNav {
+        display: none;
+    }
+ }
