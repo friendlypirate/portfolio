@@ -10,7 +10,7 @@ function resize() {
     // We execute the same script as before
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
-  }
+}
 
 window.addEventListener('resize', resize);
 window.addEventListener('load', resize);
@@ -37,20 +37,20 @@ const carousel = () => {
         }
     }
     moveToNextProject = (e) => {
-       hideAllProjects()
+        hideAllProjects()
         e.target.id == 'carouselNext'
-        ? carouselPosition  == totalProjects - 1 ? carouselPosition  = 0 : carouselPosition ++
-        : carouselPosition  === 0 ? carouselPosition  = totalProjects - 1 : carouselPosition --
+            ? carouselPosition == totalProjects - 1 ? carouselPosition = 0 : carouselPosition++
+            : carouselPosition === 0 ? carouselPosition = totalProjects - 1 : carouselPosition--
         projects[carouselPosition].classList.add("projectVisible");
     }
-    
+
     Array.from(document.querySelectorAll('.moveCarousel')).map(x => x.addEventListener('click', moveToNextProject))
 }
 carousel()
 
 //Smooth Scroll with Nav Buttons Highlighting
 buttons.forEach(x => x.addEventListener('click', () => {
-    x.id === 'next' ? main.scrollBy(0, (70 * window.innerHeight/100)) : main.scrollBy(0, (-70 * window.innerHeight/100))
+    x.id === 'next' ? main.scrollBy(0, (70 * window.innerHeight / 100)) : main.scrollBy(0, (-70 * window.innerHeight / 100))
 }))
 
 //Add event listeners to figure out when Sections are visible, changes the dot navigation accordingly and header page indicator
@@ -58,8 +58,8 @@ sections.forEach((x, index) => main.addEventListener('scroll', () => {
     const pageHeading = document.querySelector('.pageHeading')
     const botNavDots = document.querySelectorAll('.botNavDots')
     var element = document.querySelector("." + x.id);
-	var position = element.getBoundingClientRect();
-	if(position.top >= 0 && position.bottom <= window.innerHeight) {
+    var position = element.getBoundingClientRect();
+    if (position.top >= 0 && position.bottom <= window.innerHeight) {
         botNavDots.forEach(y => {
             if (y.classList.contains(x.id + 'Nav')) {
                 botNavDots.forEach(z => {
@@ -67,9 +67,14 @@ sections.forEach((x, index) => main.addEventListener('scroll', () => {
                 })
                 y.classList.add('selectedDot')
                 pageHeading.textContent = `0${index + 1} - ${x.id}`
+                index + 1 === 1
+                    ? (buttons[1].classList.add('useable'), buttons[0].classList.remove('useable'))
+                    : index + 1 === 5
+                        ? (buttons[0].classList.add('useable'), buttons[1].classList.remove('useable'))
+                        : (buttons[0].classList.add('useable'), buttons[1].classList.add('useable'))
             }
         })
-	}
+    }
 }))
 
 //Theme Changer
