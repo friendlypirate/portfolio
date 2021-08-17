@@ -177,9 +177,56 @@ header i:active,
     opacity: 0.6;
 }
 
+.logo:hover,
+.logo:focus {
+    // transform: translate(1.25);
+    animation: flagTransform 4s infinite cubic-bezier(0.5, 1, 0.89, 1) both;
+    // -webkit-animation: slide-rotate-ver-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite linear;
+    // animation: slide-rotate-ver-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite linear;
+}
+
 .logoMobile {
     width: 1.5rem
 }
 
+@keyframes flagTransform {
+    // 0% {
+
+    // }
+    40% {
+        transform: rotateZ(-45deg) scale(1.15);
+    }
+    // 50% {
+    //     transform: scale(1.25)
+    // }
+    80% {
+        transform: rotateZ(45deg)
+    }
+    20% {
+        transform: rotateZ(0deg)
+    }
+}
+
+// @-webkit-keyframes slide-rotate-ver-left {
+//     0% {
+//       -webkit-transform: translateX(0) rotateY(0);
+//               transform: translateX(0) rotateY(0);
+//     }
+//     100% {
+//       -webkit-transform: translateX(-150px) rotateY(90deg);
+//               transform: translateX(-150px) rotateY(90deg);
+//     }
+//   }
+//   @keyframes slide-rotate-ver-left {
+//     0% {
+//       -webkit-transform: translateX(0) rotateY(0);
+//               transform: translateX(0) rotateY(0);
+//     }
+//     100% {
+//       -webkit-transform: translateX(-150px) rotateY(90deg);
+//               transform: translateX(-150px) rotateY(90deg);
+//     }
+//   }
+  
 
 

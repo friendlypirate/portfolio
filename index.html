@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <div class="wrapper">
             <div class="headingsContainer">
                 <div class="pageCount">
@@ -34,7 +34,7 @@
                 <i class="fa fa-bars openTopNav"></i>
                 <span class="closeTopNav">&times;</span>
                 <nav class="topNav clearfix">
-                    <ul>
+                    <ul class="topNavUl">
                         <li class="topNavList"><a href="#landing">Home</a></li>
                         <li class="topNavList"><a href="#about">About</a></li>
                         <li class="topNavList"><a href="#skills">Skills</a></li>
@@ -83,33 +83,33 @@
         </section>
         <section id="skills" class="section skills">
             <div class="wrapper">
-                <ul class="skills">
-                    <li aria-label="HTML5"><span class="iconify" data-icon="cib:html5-shield"></span>
+                <ul class="skillsUl">
+                    <li aria-label="HTML5"><span class="testies iconify" data-icon="cib:html5-shield"></span><p class="skillsHidden">HTML5</p>
                         </span>
                     </li>
-                    <li aria-label="CSS3"><span class="iconify" data-icon="cib:css3-shiled"></span>
+                    <li aria-label="CSS3"><span class="testies iconify" data-icon="cib:css3-shiled"></span><p class="skillsHidden">CSS3</p>
                     </li>
-                    <li aria-label="SASS"><span class="iconify" data-icon="cib:sass-alt"></span>
+                    <li aria-label="SASS"><span class="testies iconify" data-icon="cib:sass-alt"></span><p class="skillsHidden">SASS</p>
                         </span>
                     </li>
-                    <li aria-label="JavaScript"><span class="iconify" data-icon="cib:javascript"></span>
+                    <li aria-label="JavaScript"><span class="testies iconify" data-icon="cib:javascript"></span><p class="skillsHidden">JavaScript</p>
                     </li>
-                    <li aria-label="JQuery"><span class="iconify" data-icon="raphael:jquery"></span>
+                    <li aria-label="JQuery"><span class="testies iconify" data-icon="raphael:jquery"></span><p class="skillsHidden">JQuery</p>
                     </li>
-                    <li aria-label="React"><span class="iconify" data-icon="cib:react"></span>
+                    <li aria-label="React"><span class="testies iconify" data-icon="cib:react"></span><p class="skillsHidden">React</p>
                     </li>
-                    <li aria-label="Firebase"><span class="iconify" data-icon="teenyicons:firebase-solid"></span>
+                    <li aria-label="Firebase"><span class="testies iconify" data-icon="teenyicons:firebase-solid"></span><p class="skillsHidden">Firebase</p>
                     </li>
-                    <li aria-label="Accessibility"><span class="iconify" data-icon="carbon:accessibility-alt"></span>
+                    <li aria-label="Accessibility"><span class="testies iconify" data-icon="carbon:accessibility-alt"></span><p class="skillsHidden">Accessibility</p></li>
                     </li>
-                    <li aria-label="Github"><span class="iconify" data-icon="carbon:logo-github"></span>
+                    <li aria-label="Github"><span class="testies iconify" data-icon="carbon:logo-github"></span><p class="skillsHidden">Github</p>
                     </li>
-                    <li aria-label="Git"><span class="iconify" data-icon="cib:git"></span>
+                    <li aria-label="Git"><span class="testies iconify" data-icon="cib:git"></span><p class="skillsHidden">Git</p>
                         </span>
                     </li>
-                    <li aria-label="Responsive Design"><span class="iconify" data-icon="eos-icons:api"></span>
+                    <li aria-label="Responsive Design"><span class="testies iconify" data-icon="eos-icons:api"></span><p class="skillsHidden">RESTFul APIs</p>
                     </li>
-                    <li aria-label="Restful Apis"><span class="iconify" data-icon="mdi:responsive"></span>
+                    <li aria-label="Restful Apis"><span class="testies iconify" data-icon="mdi:responsive"></span><p class="skillsHidden">Responsiveness</p>
                     </li>
                 </ul>
             </div>
@@ -335,10 +335,24 @@
         <div class="wrapper">
             <div class="socialLinks">
                 <div class="socialUl">
-                    <li><a href="https://www.facebook.com/nguyen.bui.7771/" target="_blank">FB</a></li>
-                    <li><a href="https://twitter.com/friendlypirate3" target="_blank">TW</a></li>
-                    <li><a href="https://www.instagram.com/friendlypirat3/" target="_blank">IG</a></li>
-                    <li><a href="https://github.com/friendlypirate" target="_blank">GH</a></li>
+                    <li>
+                        <!-- <a href="https://www.facebook.com/nguyen.bui.7771/" target="_blank"><p class="show">FB</p><span
+                            class="hidden iconify" data-icon="carbon:logo-facebook"></span></a> -->
+                            <a href="https://www.facebook.com/nguyen.bui.7771/" target="_blank"><p class="show">FB</p><span class="hidden iconify" data-icon="akar-icons:facebook-fill"></span>
+
+                            </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/friendlypirate3" target="_blank"><p class="show">TW</p><span class=" hidden iconify" data-icon="akar-icons:twitter-fill"></span>
+                        </span></a>
+                    </li>
+
+                    <li><a href="https://www.instagram.com/friendlypirat3/" target="_blank"><p class="show">IG</p><span
+                        class="hidden iconify" data-icon="bx:bxl-instagram-alt"></span></a></li>
+
+                    <li><a href="https://github.com/friendlypirate" target="_blank"><p class="show">GH</p><span class="hidden iconify"
+                        data-icon="akar-icons:github-fill"></span></a></li>
+
                 </div>
             </div>
             <div class="bottomNavContainer">

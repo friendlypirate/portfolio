@@ -63,3 +63,16 @@
     text-shadow: 0 0 3px grey, 0 0 5px white;
 }
 
+.contactsUl li:hover {
+    animation: rotation 3.5s infinite ease-out;
+}
+
+@keyframes rotation {
+    50% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(720deg);
+    }
+  }
+
