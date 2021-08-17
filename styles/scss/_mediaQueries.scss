@@ -147,7 +147,12 @@
     }
 
     .socialUl li {
-        padding: 0 0 0.45rem 0;
+        padding: 0 0 0.85rem 0;
+        font-size: 0.9rem;
+    }
+
+    .socialUl .hidden {
+        // font-size: 1.75rem;
     }
 
     .bottomNavContainer {

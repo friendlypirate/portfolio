@@ -15,7 +15,7 @@
 }
 
 
-.skills ul {
+.skillsUl {
     list-style-type: none;
     display: flex;
     font-size: 2.5rem;
@@ -24,7 +24,62 @@
     text-align: center;
 }
 
-.skills li {
+.skillsUl li {
     padding: 1.70rem;
     width: 33%;
 }
+
+.skillsUl li p {
+    visibility: hidden;
+    font-size: 0.675rem;
+    opacity: 0;
+    transition: visibility 0.5s, opacity 1.5s linear;
+    // margin: 0;
+    // padding: 0;
+    // padding-bottom: 0.9rem;
+}
+
+.skillsUl li:hover p {
+    visibility: visible;
+    opacity: 1
+}
+
+// .skillsUl li:hover span{
+//     animation: rotation 4s infinite linear;
+//     font-size: 4rem;
+// }
+.skillsUl li:hover .testies {
+    animation: spinRot 2s infinite linear;
+    // font-size: 4rem;
+}
+
+@keyframes spinRot {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+      transform: rotateY(90deg);
+      // transform: scale(1.5); scale(1
+    }
+    50% {
+      transform: rotateY(180deg);
+      //   transform: scale(2)
+    }
+    75% {
+        transform: rotateY(270deg);
+      //   transform: scale(1.5)
+    }
+    100% {
+        transform: rotateY(359deg);
+      //   transform: scale(2)
+    }
+}
+
+  @keyframes rotation {
+    50% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
