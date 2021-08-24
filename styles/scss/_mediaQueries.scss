@@ -17,6 +17,12 @@
 
 //Mobile to Tablet/Desktop
 
+@media (max-width: 768px) {
+    .lightMode header .logoLight {
+        display: none
+    }
+}
+
 @media (min-width: 768px) {
     html {
         font-size: 17px;
@@ -29,24 +35,18 @@
 
     header {
         width: 37.5vw;
-        // height: 100vh;
-        // height: 100--vh;
         height: 100%;
         flex-direction: column;
     }
 
     main {
         width: 67vw;
-        // height: 100vh;
-        // height: 100--vh;
         height: 100%;
         flex-direction: column;
     }
 
     footer {
         width: 5.5vw;
-        // height: 100vh;
-        // height: 100--vh;
         height: 100%;
     }
 
@@ -100,8 +100,6 @@
     .pageHeading {
         display: block;
         font-size: 0.7rem;
-        // opacity: 0.6;
-        // margin-bottom: 1rem; 
         text-transform: uppercase;
         letter-spacing: 0.2rem;
     }
@@ -138,8 +136,6 @@
     .socialUl {
         display: flex;
         flex-direction: column;
-        // font-size: 0.3rem;
-        // align-items: flex-end;
     }
 
     .socialUl a {
@@ -149,10 +145,6 @@
     .socialUl li {
         padding: 0 0 0.85rem 0;
         font-size: 0.9rem;
-    }
-
-    .socialUl .hidden {
-        // font-size: 1.75rem;
     }
 
     .bottomNavContainer {
@@ -178,7 +170,6 @@
     .buttonsContainer {
         display: flex;
         flex-direction: column;
-        // align-items: flex-end;
     }
 
     .buttonsContainer button {
@@ -191,12 +182,10 @@
         display: flex;
         justify-content: flex-end;
         height: 100%;
-        // width: 100%
     }
 
     .landing .landingImageContainer {
         height: inherit;
-        // display: block;
         margin-left: 20%;
         }
 
