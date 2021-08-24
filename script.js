@@ -125,25 +125,19 @@ document.querySelector('.catchMe').onclick = () => {
 
 const popUpIcon = () => {
     const catchMe = document.querySelector('.catchMe')
-    catchMe.style.display = "none"
     let randomPopUpTime = (Math.floor(Math.random() * 4) * 1000)
-    let translateX = (Math.floor(Math.random() * 50) - 25) + "rem"
-    let translateY = (Math.floor(Math.random() * 50) - 25) + "rem"
+    let translateX = (Math.floor(Math.random() * 30) - 15) + "rem"
+    let translateY = (Math.floor(Math.random() * 30) - 15) + "rem"
 
-    console.log(randomPopUpTime)
-    console.log(translateX)
-    console.log(translateY)
+    catchMe.style.display = "none"
     document.documentElement.style.setProperty("--animationDirectionVertical", translateY)
     document.documentElement.style.setProperty("--animationDirectionHorizontal", translateX)
-    // console.log(header.clientHeight)
-    let catchMeTop = header.clientHeight
-    let top = Math.floor(Math.random() * window.innerHeight);
+    
+    let top = Math.floor(Math.random() * window.innerHeight)
     let left = Math.floor(Math.random() * window.innerWidth)
-    console.log(top)
     catchMe.style.left = left + "px"
     catchMe.style.top = top + "px"
     
-    // catchMe.style.display = "block"
     setTimeout(() => {
         catchMe.style.display = "block"
     }, randomPopUpTime)
