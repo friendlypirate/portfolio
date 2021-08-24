@@ -718,6 +718,12 @@ header i,
 
 .projectContainer {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .allProjects {
@@ -783,6 +789,7 @@ header i,
   visibility: hidden;
   -webkit-transition: visibility 0s, opacity 0.5s linear;
   transition: visibility 0s, opacity 0.5s linear;
+  cursor: default;
 }
 
 .visible {
@@ -843,6 +850,7 @@ header i,
   border-radius: 6px;
   border: 1px solid #dcdcdc;
   display: inline-block;
+  cursor: default;
   color: #777777;
   font-family: Arial;
   font-size: 0.5rem;
@@ -920,9 +928,11 @@ header i,
   cursor: pointer;
   width: 1.5rem;
   height: 1.5rem;
+  margin: 1rem 0;
   -webkit-box-shadow: 0 0 3px grey, 0 0 5px white;
           box-shadow: 0 0 3px grey, 0 0 5px white;
-  margin: 1rem 0;
+  -webkit-animation: pulse 3.5s infinite;
+          animation: pulse 3.5s infinite;
 }
 
 @-webkit-keyframes fadeVisibility {
@@ -1727,13 +1737,13 @@ footer a {
   }
 }
 .lightMode {
-  background-color: white;
+  background-color: #fffafa;
 }
 
 .lightMode main,
 .lightMode footer,
 .lightMode header {
-  background-color: white;
+  background-color: #fffafa;
   color: #110f10;
 }
 
