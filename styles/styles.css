@@ -246,6 +246,11 @@ template {
   overflow: hidden;
 }
 
+:root {
+  --animationDirectionVertical: 20rem;
+  --animationDirectionHorizontal: 20rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -324,6 +329,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   letter-spacing: 0.075rem;
+  position: relative;
 }
 
 header .wrapper {
@@ -350,20 +356,12 @@ header h2 {
 header i,
 .closeTopNav {
   font-size: 1.35rem;
-  color: white;
   padding: 0;
   text-shadow: 0 0 1.5px grey, 0 0 2.5px white;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   display: none;
-}
-
-header i:focus,
-header i:active,
-.closeTopNav:focus,
-.closeTopNav:active {
-  color: #202020;
 }
 
 .closeTopNav {
@@ -465,16 +463,65 @@ header i:active,
   opacity: 0.6;
 }
 
+.logoLight {
+  display: none;
+  width: 4.5rem;
+  opacity: 0.75;
+}
+
 .logo:hover,
-.logo:focus {
-  -webkit-animation: flagTransform 4s infinite cubic-bezier(0.5, 1, 0.89, 1) both;
-          animation: flagTransform 4s infinite cubic-bezier(0.5, 1, 0.89, 1) both;
+.logo:focus,
+.logoLight:hover,
+.logoLight:hover {
+  -webkit-animation: flagTransform2 4s infinite cubic-bezier(0.5, 1, 0.89, 1);
+          animation: flagTransform2 4s infinite cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+.theme2 {
+  margin-top: -1rem;
 }
 
 .logoMobile {
   width: 1.5rem;
 }
 
+@-webkit-keyframes flagTransform2 {
+  25% {
+    -webkit-transform: rotateY(-20deg);
+            transform: rotateY(-20deg);
+  }
+  50% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  75% {
+    -webkit-transform: rotateY(-30deg);
+            transform: rotateY(-30deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+
+@keyframes flagTransform2 {
+  25% {
+    -webkit-transform: rotateY(-20deg);
+            transform: rotateY(-20deg);
+  }
+  50% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  75% {
+    -webkit-transform: rotateY(-30deg);
+            transform: rotateY(-30deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
 @-webkit-keyframes flagTransform {
   40% {
     -webkit-transform: rotateZ(-45deg) scale(1.15);
@@ -489,7 +536,6 @@ header i:active,
             transform: rotateZ(0deg);
   }
 }
-
 @keyframes flagTransform {
   40% {
     -webkit-transform: rotateZ(-45deg) scale(1.15);
@@ -504,8 +550,37 @@ header i:active,
             transform: rotateZ(0deg);
   }
 }
+.catchMe {
+  width: 2rem;
+  opacity: 0.35;
+  -webkit-animation: catchMeRotation 8s linear infinite;
+          animation: catchMeRotation 8s linear infinite;
+  position: absolute;
+  display: none;
+  z-index: 15;
+}
+
+.catchMe:hover,
+.cathcMe:focus {
+  cursor: pointer;
+  opacity: 1;
+  width: 2.75rem;
+}
+
+@-webkit-keyframes catchMeRotation {
+  100% {
+    -webkit-transform: translate(var(--animationDirectionVertical), var(--animationDirectionVertical)) rotate(360deg);
+            transform: translate(var(--animationDirectionVertical), var(--animationDirectionVertical)) rotate(360deg);
+  }
+}
+
+@keyframes catchMeRotation {
+  100% {
+    -webkit-transform: translate(var(--animationDirectionVertical), var(--animationDirectionVertical)) rotate(360deg);
+            transform: translate(var(--animationDirectionVertical), var(--animationDirectionVertical)) rotate(360deg);
+  }
+}
 .landing {
-  background-color: #202020;
   height: 100%;
   overflow: auto;
 }
@@ -662,7 +737,6 @@ header i:active,
 .project {
   width: 100%;
   max-width: 525px;
-  background-color: #202020;
   font-size: 0.65rem;
   position: relative;
   display: none;
@@ -683,7 +757,8 @@ header i:active,
 }
 
 .project > p {
-  font-size: 0.55rem;
+  font-size: 0.615rem;
+  letter-spacing: 0.19rem;
   padding: 0.25rem 0;
   text-align: center;
   text-transform: uppercase;
@@ -768,7 +843,6 @@ header i:active,
   border-radius: 6px;
   border: 1px solid #dcdcdc;
   display: inline-block;
-  cursor: pointer;
   color: #777777;
   font-family: Arial;
   font-size: 0.5rem;
@@ -869,8 +943,6 @@ header i:active,
   }
 }
 .skills {
-  background-color: #202020;
-  color: white;
   overflow: auto;
 }
 
@@ -1018,7 +1090,7 @@ header i:active,
 }
 
 .contactText p {
-  font-size: 0.825rem;
+  font-size: 0.95rem;
   margin-bottom: 2.5rem;
   padding-right: 2.5rem;
 }
@@ -1028,12 +1100,12 @@ header i:active,
 }
 
 .contactsContainer h3 {
-  font-size: 0.5rem;
+  font-size: 0.725rem;
   padding-bottom: 1rem;
 }
 
 .contactsContainer p {
-  font-size: 0.65rem;
+  font-size: 0.9rem;
   margin-bottom: 0.15rem;
 }
 
@@ -1078,8 +1150,6 @@ header i:active,
   }
 }
 footer {
-  background-color: #202020;
-  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1251,68 +1321,6 @@ footer a {
             transform: rotateY(359deg) scale(1);
   }
 }
-@-webkit-keyframes textTransform {
-  0% {
-    -webkit-transform: scale(2);
-            transform: scale(2);
-  }
-  50% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(2);
-            transform: scale(2);
-  }
-}
-@keyframes textTransform {
-  0% {
-    -webkit-transform: scale(2);
-            transform: scale(2);
-  }
-  50% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(2);
-            transform: scale(2);
-  }
-}
-@-webkit-keyframes textGrowth {
-  0% {
-    font-size: 0.75rem;
-  }
-  25% {
-    font-size: 1rem;
-  }
-  50% {
-    font-size: 1.25rem;
-  }
-  75% {
-    font-size: 1.5rem;
-  }
-  100% {
-    font-size: 1.75rem;
-  }
-}
-@keyframes textGrowth {
-  0% {
-    font-size: 0.75rem;
-  }
-  25% {
-    font-size: 1rem;
-  }
-  50% {
-    font-size: 1.25rem;
-  }
-  75% {
-    font-size: 1.5rem;
-  }
-  100% {
-    font-size: 1.75rem;
-  }
-}
 .botNav a {
   font-size: 1.5rem;
   padding: 0 0.2rem;
@@ -1402,8 +1410,8 @@ footer a {
     opacity: 0.75;
   }
   70% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
     text-shadow: 0 0 3px grey, 0 0 5px white;
     opacity: 1;
   }
@@ -1423,8 +1431,8 @@ footer a {
     opacity: 0.75;
   }
   70% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
     text-shadow: 0 0 3px grey, 0 0 5px white;
     opacity: 1;
   }
@@ -1447,6 +1455,11 @@ footer a {
 @media (min-width: 576px) {
   html {
     font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .lightMode header .logoLight {
+    display: none;
   }
 }
 @media (min-width: 768px) {
@@ -1715,5 +1728,108 @@ footer a {
 }
 .lightMode {
   background-color: white;
+}
+
+.lightMode main,
+.lightMode footer,
+.lightMode header {
+  background-color: white;
   color: #110f10;
+}
+
+.lightMode .logo {
+  display: none;
+}
+
+.lightMode .logoLight {
+  display: block;
+}
+
+.lightMode .topNavContainer a {
+  color: black;
+}
+
+.lightMode .catchMe {
+  opacity: 0.6;
+}
+
+.lightMode .catchMe:hover,
+.lightMode .cathcMe:focus {
+  cursor: pointer;
+  opacity: 1;
+  width: 2.75rem;
+}
+
+.lightMode .projectInfo p,
+.lightMode .projectInfo h3 {
+  color: white;
+}
+
+.lightMode .carouselButtons button {
+  background-color: whitesmoke;
+  color: black;
+  border: 1.25px solid black;
+}
+
+.lightMode .contact a {
+  color: black;
+}
+
+.lightMode footer a {
+  color: black;
+}
+
+.lightMode .buttonsContainer button {
+  background-color: whitesmoke;
+  color: black;
+}
+
+.lightMode .buttonsContainer .useable {
+  -webkit-box-shadow: 0 0 1.5px 10 black;
+          box-shadow: 0 0 1.5px 10 black;
+  border: 1.25px solid black;
+  -webkit-animation: pulseLight 3.5s infinite;
+          animation: pulseLight 3.5s infinite;
+}
+
+@-webkit-keyframes pulseLight {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0 0 3px grey, 0 0 5px white;
+            box-shadow: 0 0 3px grey, 0 0 5px white;
+  }
+  70% {
+    -webkit-transform: scale(1.025);
+            transform: scale(1.025);
+    -webkit-box-shadow: 0 0 3px grey, 0 0 5px white;
+            box-shadow: 0 0 3px grey, 0 0 5px white;
+  }
+  100% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0 0 3px grey, 0 0 5px white;
+            box-shadow: 0 0 3px grey, 0 0 5px white;
+  }
+}
+
+@keyframes pulseLight {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0 0 3px grey, 0 0 5px white;
+            box-shadow: 0 0 3px grey, 0 0 5px white;
+  }
+  70% {
+    -webkit-transform: scale(1.025);
+            transform: scale(1.025);
+    -webkit-box-shadow: 0 0 3px grey, 0 0 5px white;
+            box-shadow: 0 0 3px grey, 0 0 5px white;
+  }
+  100% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-box-shadow: 0 0 3px grey, 0 0 5px white;
+            box-shadow: 0 0 3px grey, 0 0 5px white;
+  }
 }

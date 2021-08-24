@@ -1,13 +1,14 @@
+const header = document.querySelector('.header')
 const buttons = document.querySelectorAll('.navButton')
 const main = document.getElementById('main')
 const projects = document.querySelector('.projects')
 const projectInfo1 = document.querySelector('.projectInfo1')
 const closeInfoButtons = [1, 2, 3, 4, 5, 6]
 const sections = document.querySelectorAll('.section')
-let topNav = document.querySelector('.topNav')
-let openTopNav = document.querySelector('.openTopNav')
-let closeTopNav = document.querySelector('.closeTopNav')
-let navItems = Array.from(document.querySelectorAll('.topNavList'))
+const topNav = document.querySelector('.topNav')
+const openTopNav = document.querySelector('.openTopNav')
+const closeTopNav = document.querySelector('.closeTopNav')
+const navItems = Array.from(document.querySelectorAll('.topNavList'))
 
 //Mobile Vh Sizing Issue
 function resize() {
@@ -82,11 +83,6 @@ sections.forEach((x, index) => main.addEventListener('scroll', () => {
 
 //Open Close Hamburger menu
 const hamburger = () => {
-    // let topNav = document.querySelector('.topNav')
-    // let openTopNav = document.querySelector('.openTopNav')
-    // let closeTopNav = document.querySelector('.closeTopNav')
-    // let navItems = Array.from(document.querySelectorAll('.topNavList'))
-
     openTopNav.addEventListener('click', (e) => {
         console.log("clicked I")
         openTopNav.style.display = "none"
@@ -118,8 +114,41 @@ const hamburger = () => {
 hamburger()
 
 
-//Theme Changer
+// Theme Changer
 
-// document.querySelector('.theme').onclick = () => {
-//     document.querySelector('body').classList.toggle('lightMode')
-// }
+document.querySelector('.catchMe').onclick = () => {
+    console.log('im tagged')
+    document.querySelector('html').classList.toggle('lightMode')
+}
+
+//Secret Logo Theme Changer
+
+const popUpIcon = () => {
+    const catchMe = document.querySelector('.catchMe')
+    catchMe.style.display = "none"
+    let randomPopUpTime = (Math.floor(Math.random() * 4) * 1000)
+    let translateX = (Math.floor(Math.random() * 50) - 25) + "rem"
+    let translateY = (Math.floor(Math.random() * 50) - 25) + "rem"
+
+    console.log(randomPopUpTime)
+    console.log(translateX)
+    console.log(translateY)
+    document.documentElement.style.setProperty("--animationDirectionVertical", translateY)
+    document.documentElement.style.setProperty("--animationDirectionHorizontal", translateX)
+    // console.log(header.clientHeight)
+    let catchMeTop = header.clientHeight
+    let top = Math.floor(Math.random() * window.innerHeight);
+    let left = Math.floor(Math.random() * window.innerWidth)
+    console.log(top)
+    catchMe.style.left = left + "px"
+    catchMe.style.top = top + "px"
+    
+    // catchMe.style.display = "block"
+    setTimeout(() => {
+        catchMe.style.display = "block"
+    }, randomPopUpTime)
+}
+
+setInterval(() => {
+    popUpIcon()
+}, 8000);

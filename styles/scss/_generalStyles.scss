@@ -3,6 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Tinos&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+//Variables
+
+:root {
+    --animationDirectionVertical: 20rem;
+    --animationDirectionHorizontal: 20rem;
+}
+
 * { 
     margin: 0; 
     padding: 0;
@@ -27,33 +34,7 @@ body {
     min-height: -webkit-fill-available;
     height: calc(var(--vh, 1vh) * 100);
     max-width: 1450px;
-    // height: 100vh;
-    // background-image: url(../assets/fpLogo.jpg);
-    // background-size:contain;
-    // background-repeat: no-repeat;
-    // background-image: transparent url(../assets/fpLogo.jpg) no-repeat fixed center
 }
-
-//Logo stuffs
-// header:before {
-//     content: ' ';
-//     display: block;
-//     position: absolute;
-//     left: 2.5rem;
-//     top: 1rem;
-//     width: 100%;
-//     height: 100%;
-//     z-index: -1;
-//     opacity: 0.05;
-//     background-image: url(../assets/fpLogo.jpg);
-//     background-repeat: no-repeat;
-//     background-position: 50% 0;
-//     -ms-background-size: contain;
-//     -o-background-size: contain;
-//     -moz-background-size: contain;
-//     -webkit-background-size: contain;
-//     background-size: contain;
-// }
 
 header,
 footer,
@@ -62,21 +43,14 @@ main {
 }
 
 header {
-    // height: 20vh;
-    // height: 20--vh; 
     height: 20%;
-    // position: relative;
 }
 
 footer {
-    // height: 10vh;
-    // height: 10--vh;
     height: 10%;
 }
 
 main {
-    // height: 70vh;
-    // height: 70--vh;
     height: 70%;
     overflow: auto;
     scroll-behavior: smooth;
@@ -101,41 +75,3 @@ section {
     height: 100%;
     scroll-snap-align: center;
 }
-
-// .wrapper {
-//     max-width: 992px;
-//     min-width: 440px;
-// }
-
-
-// header .wrapper {
-//     display: flex;
-//     justify-content: center;
-// }
-
-// header .infoButton {
-//     background-color: $accentColorA;
-//     border: none;
-//     margin-left: 0.5rem;
-// }
-
-// header p,
-// footer p {
-//     margin: 0;
-//         a {
-//             font-family: sans-serif, regular;
-//             font-size: 1.2rem;
-//             letter-spacing: 0rem;
-//             text-decoration: none;
-//         }
-//         a:focus,
-//         a:hover {
-//             font-size: 1.4rem;
-//             color: $accentColorE;
-//         }
-// }
-
-// main {
-//     background-color: white;
-// }
-
