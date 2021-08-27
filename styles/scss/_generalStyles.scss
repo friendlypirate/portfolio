@@ -6,8 +6,14 @@
 //Variables
 
 :root {
-    --animationDirectionVertical: 20rem;
-    --animationDirectionHorizontal: 20rem;
+    --animationDirectionVerticalcatchPink: 20rem;
+    --animationDirectionHorizontalcatchPink: 20rem;
+    --animationDirectionVerticalcatchBlack: 20rem;
+    --animationDirectionHorizontalcatchBlack: 20rem;
+    --animationDirectionVerticalcatchWhite: 20rem;
+    --animationDirectionHorizontalcatchWhite: 20rem;
+    // --moveX: 1.5rem;
+    // --moveY: 1rem;
 }
 
 * { 
@@ -23,6 +29,7 @@ html {
 }
 
 body {
+    // position: relative;
     font-family: $baseFont;
     letter-spacing: 0.05rem;
     background-color: $darkMain;
@@ -75,3 +82,151 @@ section {
     height: 100%;
     scroll-snap-align: center;
 }
+
+//Theme Changers
+.catchMe {
+    width: 2rem;
+    opacity: 0.6;
+    // animation: catchMeRotation 8s linear infinite;
+    position: absolute;
+    display: none;
+    z-index: 15;
+}
+
+.catchPink {
+    animation: catchMeRotationPink 30s linear infinite ;
+
+}
+
+.catchBlack {
+    animation: catchMeRotationBlack 30s linear infinite ;
+    opacity: 1;
+}
+
+.catchWhite {
+    animation: catchMeRotationWhite 30s linear infinite ;
+
+}
+
+
+
+// body .catchBlack {
+//     opacity: 1;
+//     box-shadow: 0 0 3px grey, 0 0 5px white;
+
+// }
+
+.catchMe:hover,
+.catchMe:focus {
+    cursor: pointer;
+    opacity: 1;
+    width: 2.1rem;
+}
+
+// .catchMeDiv {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+// }
+
+// @keyframes catchMeRotationPink {
+//     100% {
+//         transform: translate(var(--animationDirectionVerticalcatchPink), var(--animationDirectionHorizontalcatchPink)) rotate(360deg);
+//     }
+// }
+
+// @keyframes catchMeRotationBlack {
+//     100% {
+//         transform: translate(var(--animationDirectionVerticalcatchBlack), var(--animationDirectionHorizontalcatchBlack)) rotate(360deg);
+//     }
+// }
+
+// @keyframes catchMeRotationWhite {
+//     100% {
+//         transform: translate(var(--animationDirectionVerticalcatchWhite), var(--animationDirectionHorizontalcatchWhite)) rotate(360deg);
+//     }
+// }
+
+@keyframes catchMeRotationPink {
+    0% {
+        opacity: 0
+    }
+
+    20% {
+        opacity: 0.6
+    }
+    80% {
+        opacity: 0.6    
+    }
+    95% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(var(--animationDirectionVerticalcatchPink), var(--animationDirectionHorizontalcatchPink)) rotate(360deg);
+    }
+}
+
+@keyframes catchMeRotationBlack {
+    0% {
+        opacity: 0
+    }
+
+    10% {
+        opacity: 1
+    }
+    80% {
+        opacity: 1   
+    }
+    95% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(var(--animationDirectionVerticalcatchBlack), var(--animationDirectionHorizontalcatchBlack)) rotate(360deg);
+    }
+}
+
+@keyframes catchMeRotationWhite {
+    0% {
+        opacity: 0.2
+    }
+
+    20% {
+        opacity: 0.6
+    }
+    80% {
+        opacity: 0.6    
+    }
+    95% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(var(--animationDirectionVerticalcatchWhite), var(--animationDirectionHorizontalcatchWhite)) rotate(360deg);
+    }
+}
+
+// .el { 
+//     width: var(--width);
+//     height: var(--width);
+//   }
+  
+//   .catchMeDiv {
+//     animation: x 7s linear infinite alternate;
+//   }
+//   .catchMe {
+//     animation: y 13s linear infinite alternate;
+//   }
+  
+//   @keyframes x {
+//     100% {
+//       transform: translateX(calc(100vw - 2rem));
+//     }
+//   }
+//   @keyframes y {
+//     100% {
+//       transform: translateY(calc(100vh - 2rem));
+//     }
+//   }
+  
