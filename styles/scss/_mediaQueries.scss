@@ -17,20 +17,13 @@
 
 //Mobile to Tablet/Desktop
 
-@media (max-width: 768px) {
-    .lightMode header .logoLight {
-        display: none
-    }
-    .lightMode header .logoPink {
-        display: none
-    }
-}
-
 @media (min-width: 768px) {
     html {
         font-size: 17px;
     }
+    
     //General Stylings
+
     body {
         display: flex;
         flex-direction: row;
@@ -107,9 +100,11 @@
         letter-spacing: 0.2rem;
     }
 
-    .logo {
-        display: block;
-    }
+    .logo,
+    .logoLight,
+    .logoPink {
+        width: 4.5rem;
+    } 
 
     .headerHeadings {
         margin-top: -2rem;

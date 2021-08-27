@@ -1,9 +1,9 @@
 //Changing Themes
 
 //LightMode
+
 .lightMode {
     background-color: #fffafa;
-    // opacity: 1;
 }
 
 .lightMode main,
@@ -12,7 +12,6 @@
     background-color: #fffafa;  
     color: #110f10;
 }
-
 
 //Header
 
@@ -29,19 +28,11 @@
     color: black;
 }
 
-// .lightMode .catchMe {
-//     // opacity: 0.6;
-// }
-
-// .lightMode .catchMe:hover,
-// .lightMode .cathcMe:focus {
-//     cursor: pointer;
-//     opacity: 1;
-//     width: 2.75rem;
-// }
+.lightMode .catchBlack {
+    opacity: 0.6;
+}
 
 //Main
-
 //Project
 
 .lightMode .projectInfo p,
@@ -54,7 +45,6 @@
     color: black;
     border: 1.25px solid black;
 }
-
 
 //Contact 
 
@@ -77,7 +67,6 @@
     box-shadow: 0 0 1.5px 10 black;
     border: 1.25px solid black;
     animation: pulseLight 3.5s infinite;
-    // opacity: 1;
 }
 
 @keyframes pulseLight {
@@ -98,12 +87,9 @@
 }
 
 //PinkMode
-// #d96fa8
-// #6fd9a0
 
 .pinkMode {
     background-color: $pinkPrime;
-    // opacity: 1;
 }
 
 .pinkMode main,
@@ -112,7 +98,6 @@
     background-color: $pinkPrime;  
     color: $pinkSec;
 }
-
 
 //Header
 
@@ -129,19 +114,7 @@
     color: $pinkSec;
 }
 
-// .pinkMode .catchMe {
-//     // opacity: 0.6;
-// }
-
-// .pinkMode .catchMe:hover,
-// .pinkMode .cathcMe:focus {
-//     cursor: pointer;
-//     opacity: 1;
-//     width: 2.75rem;
-// }
-
 //Main
-
 //Project
 
 .pinkMode .projectInfo p,
@@ -157,6 +130,9 @@
     animation: pulseLight 3.5s infinite;
 }
 
+.pinkMode .infoUl li {
+    opacity: 0.75;
+}
 
 //Contact 
 
@@ -179,7 +155,6 @@
     box-shadow: 0 0 1.5px 10 black;
     border: 1.25px solid black;
     animation: pulseLight 3.5s infinite;
-    // opacity: 1;
 }
 
 @keyframes pulseLight {

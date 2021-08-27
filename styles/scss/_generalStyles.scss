@@ -85,67 +85,32 @@ section {
 
 //Theme Changers
 .catchMe {
-    width: 2rem;
+    width: 1.55rem;
     opacity: 0.6;
-    // animation: catchMeRotation 8s linear infinite;
     position: absolute;
     display: none;
     z-index: 15;
 }
 
-.catchPink {
-    animation: catchMeRotationPink 30s linear infinite ;
-
-}
-
-.catchBlack {
-    animation: catchMeRotationBlack 30s linear infinite ;
-    opacity: 1;
-}
-
-.catchWhite {
-    animation: catchMeRotationWhite 30s linear infinite ;
-
-}
-
-
-
-// body .catchBlack {
-//     opacity: 1;
-//     box-shadow: 0 0 3px grey, 0 0 5px white;
-
-// }
-
 .catchMe:hover,
 .catchMe:focus {
     cursor: pointer;
     opacity: 1;
-    width: 2.1rem;
+    width: 1.625rem;
 }
 
-// .catchMeDiv {
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-// }
+.catchPink {
+    animation: catchMeRotationPink 30s linear infinite ;
+}
 
-// @keyframes catchMeRotationPink {
-//     100% {
-//         transform: translate(var(--animationDirectionVerticalcatchPink), var(--animationDirectionHorizontalcatchPink)) rotate(360deg);
-//     }
-// }
+.catchBlack {
+    animation: catchMeRotationBlack 30s linear infinite ;
+    // opacity: 1;
+}
 
-// @keyframes catchMeRotationBlack {
-//     100% {
-//         transform: translate(var(--animationDirectionVerticalcatchBlack), var(--animationDirectionHorizontalcatchBlack)) rotate(360deg);
-//     }
-// }
-
-// @keyframes catchMeRotationWhite {
-//     100% {
-//         transform: translate(var(--animationDirectionVerticalcatchWhite), var(--animationDirectionHorizontalcatchWhite)) rotate(360deg);
-//     }
-// }
+.catchWhite {
+    animation: catchMeRotationWhite 30s linear infinite ;
+}
 
 @keyframes catchMeRotationPink {
     0% {
@@ -207,26 +172,5 @@ section {
     }
 }
 
-// .el { 
-//     width: var(--width);
-//     height: var(--width);
-//   }
-  
-//   .catchMeDiv {
-//     animation: x 7s linear infinite alternate;
-//   }
-//   .catchMe {
-//     animation: y 13s linear infinite alternate;
-//   }
-  
-//   @keyframes x {
-//     100% {
-//       transform: translateX(calc(100vw - 2rem));
-//     }
-//   }
-//   @keyframes y {
-//     100% {
-//       transform: translateY(calc(100vh - 2rem));
-//     }
-//   }
+
   
