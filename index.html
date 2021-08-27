@@ -14,15 +14,23 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TKKHRKQYF2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'G-TKKHRKQYF2');
     </script>
-    </head>
+</head>
 
 <body>
-    <img class="catchMe" src="assets/fpPinkTrans.png" alt="secret pirate flag" />
+    <!-- <div class="catchMeDiv"> -->
+        <img id="catchPink" class="catchMe catchPink" src="assets/fpPink.png" alt="secret pink pirate flag" />
+    <!-- </div> -->
+    <!-- <div class="catchMeDiv"> -->
+        <img id="catchWhite" class="catchMe catchWhite" src="assets/fpWhite.png" alt="secret white pirate flag" />
+    <!-- </div> -->
+    <!-- <div class="catchMeDiv"> -->
+        <img id="catchBlack" class="catchMe catchBlack" src="assets/fpBlack.png" alt="secret black pirate flag" />
+    <!-- </div> -->
     <header class="header">
         <!-- <img class="catchMe" src="assets/fpPinkTrans.png" alt="secret pirate flag" /> -->
         <div class="wrapper">
@@ -36,9 +44,11 @@
                 </div>
                 <div class="headerHeadings">
                     <div class="fullTitle">
-                        <img class="logo" src="assets/Friendly pirate logo/Fp_white-greybg.jpg" alt="logo" />
-                        <img class="logoLight" src="assets/fpLogoLight.jpg" alt="logo inlight mode" />
+                        <img class="logo" src="assets/fpWhite.png" alt="logo" />
+                        <img class="logoLight" src="assets/fpBlack.png" alt="logo in light mode" />
+                        <img class="logoPink" src="assets/fpPink.png" alt="logo in pink mode" />
                         <h1 class="theme">Nguyen (Wyn) Bui</h1>
+                        <!--get rid of theme-->
                     </div>
                     <h2>front-end developer. friendlypirate.</h2>
                 </div>
@@ -74,8 +84,10 @@
                     <div class="aboutText">
                         <h2>Developer and pirate.</h2>
                         <p>Ahoy matey! I be Wyn, the friendlypirate and recent Juno graduate. My passion is writing code
-                            that is accessible, responsive and efficient. I am on the hunt for a career in development, with
-                            a crew I respect and love. Together we can develop something more valuable than Blackbeard's treaure.
+                            that is accessible, responsive and efficient. I am on the hunt for a career in development,
+                            with
+                            a crew I respect and love. Together we can develop something more valuable than Blackbeard's
+                            treaure.
                         </p>
                     </div>
                 </div>
@@ -84,7 +96,8 @@
                         <h2>Traveller and friend.</h2>
                         <p>Blossoming developer, pun master, board game curator, nature enthusiast impersonator, past
                             prime athlete, cat whisperer, and leader of the previous Jameson revolution. They say it is
-                            difficult to describe yourself in one sentence, yet here we are. P.S. My favourite colour is pink.
+                            difficult to describe yourself in one sentence, yet here we are. P.S. My favourite colour is
+                            pink.
                         </p>
                     </div>
                     <div class="aboutImageContainer">
@@ -96,32 +109,47 @@
         <section id="skills" class="section skills">
             <div class="wrapper">
                 <ul class="skillsUl">
-                    <li aria-label="HTML5"><span class="testies iconify" data-icon="cib:html5-shield"></span><p class="skillsHidden">HTML5</p>
+                    <li aria-label="HTML5"><span class="testies iconify" data-icon="cib:html5-shield"></span>
+                        <p class="skillsHidden">HTML5</p>
                         </span>
                     </li>
-                    <li aria-label="CSS3"><span class="testies iconify" data-icon="cib:css3-shiled"></span><p class="skillsHidden">CSS3</p>
+                    <li aria-label="CSS3"><span class="testies iconify" data-icon="cib:css3-shiled"></span>
+                        <p class="skillsHidden">CSS3</p>
                     </li>
-                    <li aria-label="SASS"><span class="testies iconify" data-icon="cib:sass-alt"></span><p class="skillsHidden">SASS</p>
+                    <li aria-label="SASS"><span class="testies iconify" data-icon="cib:sass-alt"></span>
+                        <p class="skillsHidden">SASS</p>
                         </span>
                     </li>
-                    <li aria-label="JavaScript"><span class="testies iconify" data-icon="cib:javascript"></span><p class="skillsHidden">JavaScript</p>
+                    <li aria-label="JavaScript"><span class="testies iconify" data-icon="cib:javascript"></span>
+                        <p class="skillsHidden">JavaScript</p>
                     </li>
-                    <li aria-label="JQuery"><span class="testies iconify" data-icon="raphael:jquery"></span><p class="skillsHidden">JQuery</p>
+                    <li aria-label="JQuery"><span class="testies iconify" data-icon="raphael:jquery"></span>
+                        <p class="skillsHidden">JQuery</p>
                     </li>
-                    <li aria-label="React"><span class="testies iconify" data-icon="cib:react"></span><p class="skillsHidden">React</p>
+                    <li aria-label="React"><span class="testies iconify" data-icon="cib:react"></span>
+                        <p class="skillsHidden">React</p>
                     </li>
-                    <li aria-label="Firebase"><span class="testies iconify" data-icon="teenyicons:firebase-solid"></span><p class="skillsHidden">Firebase</p>
+                    <li aria-label="Firebase"><span class="testies iconify"
+                            data-icon="teenyicons:firebase-solid"></span>
+                        <p class="skillsHidden">Firebase</p>
                     </li>
-                    <li aria-label="Accessibility"><span class="testies iconify" data-icon="carbon:accessibility-alt"></span><p class="skillsHidden">Accessibility</p></li>
+                    <li aria-label="Accessibility"><span class="testies iconify"
+                            data-icon="carbon:accessibility-alt"></span>
+                        <p class="skillsHidden">Accessibility</p>
                     </li>
-                    <li aria-label="Github"><span class="testies iconify" data-icon="carbon:logo-github"></span><p class="skillsHidden">Github</p>
                     </li>
-                    <li aria-label="Git"><span class="testies iconify" data-icon="cib:git"></span><p class="skillsHidden">Git</p>
+                    <li aria-label="Github"><span class="testies iconify" data-icon="carbon:logo-github"></span>
+                        <p class="skillsHidden">Github</p>
+                    </li>
+                    <li aria-label="Git"><span class="testies iconify" data-icon="cib:git"></span>
+                        <p class="skillsHidden">Git</p>
                         </span>
                     </li>
-                    <li aria-label="Responsive Design"><span class="testies iconify" data-icon="eos-icons:api"></span><p class="skillsHidden">RESTFul APIs</p>
+                    <li aria-label="Responsive Design"><span class="testies iconify" data-icon="eos-icons:api"></span>
+                        <p class="skillsHidden">RESTFul APIs</p>
                     </li>
-                    <li aria-label="Restful Apis"><span class="testies iconify" data-icon="mdi:responsive"></span><p class="skillsHidden">Responsiveness</p>
+                    <li aria-label="Restful Apis"><span class="testies iconify" data-icon="mdi:responsive"></span>
+                        <p class="skillsHidden">Responsiveness</p>
                     </li>
                 </ul>
             </div>
@@ -348,19 +376,27 @@
             <div class="socialLinks">
                 <div class="socialUl">
                     <li>
-                        <a href="https://www.facebook.com/nguyen.bui.7771/" target="_blank"><p class="show">FB</p><span class="hidden iconify" data-icon="akar-icons:facebook-fill"></span>
+                        <a href="https://www.facebook.com/nguyen.bui.7771/" target="_blank">
+                            <p class="show">FB</p><span class="hidden iconify"
+                                data-icon="akar-icons:facebook-fill"></span>
                         </a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/friendlypirate3" target="_blank"><p class="show">TW</p><span class=" hidden iconify" data-icon="akar-icons:twitter-fill"></span>
-                        </span></a>
+                        <a href="https://twitter.com/friendlypirate3" target="_blank">
+                            <p class="show">TW</p><span class=" hidden iconify"
+                                data-icon="akar-icons:twitter-fill"></span>
+                            </span>
+                        </a>
                     </li>
 
-                    <li><a href="https://www.instagram.com/friendlypirat3/" target="_blank"><p class="show">IG</p><span
-                        class="hidden iconify" data-icon="bx:bxl-instagram-alt"></span></a></li>
+                    <li><a href="https://www.instagram.com/friendlypirat3/" target="_blank">
+                            <p class="show">IG</p><span class="hidden iconify" data-icon="bx:bxl-instagram-alt"></span>
+                        </a></li>
 
-                    <li><a href="https://github.com/friendlypirate" target="_blank"><p class="show">GH</p><span class="hidden iconify"
-                        data-icon="akar-icons:github-fill"></span></a></li>
+                    <li><a href="https://github.com/friendlypirate" target="_blank">
+                            <p class="show">GH</p><span class="hidden iconify"
+                                data-icon="akar-icons:github-fill"></span>
+                        </a></li>
 
                 </div>
             </div>

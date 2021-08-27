@@ -1,6 +1,7 @@
+const html = document.querySelector('html')
 const header = document.querySelector('.header')
-const buttons = document.querySelectorAll('.navButton')
 const main = document.getElementById('main')
+const buttons = document.querySelectorAll('.navButton')
 const projects = document.querySelector('.projects')
 const projectInfo1 = document.querySelector('.projectInfo1')
 const closeInfoButtons = [1, 2, 3, 4, 5, 6]
@@ -84,14 +85,12 @@ sections.forEach((x, index) => main.addEventListener('scroll', () => {
 //Open Close Hamburger menu
 const hamburger = () => {
     openTopNav.addEventListener('click', (e) => {
-        console.log("clicked I")
         openTopNav.style.display = "none"
         closeTopNav.style.display = "block"
         topNav.classList.add('topNavVisible')
     })
 
     closeTopNav.addEventListener('click', (e) => {
-        console.log("clicked X")
         openTopNav.style.display = "block"
         closeTopNav.style.display = "none"
         topNav.classList.remove('topNavVisible')
@@ -115,34 +114,103 @@ hamburger()
 
 
 // Theme Changer
+let hiddenLogos = Array.from(document.querySelectorAll('.catchMe'))
 
-document.querySelector('.catchMe').onclick = () => {
-    console.log('im tagged')
-    document.querySelector('html').classList.toggle('lightMode')
-}
+hiddenLogos.map(x => x.onclick = (e) => {
+    // console.log('im tagged')
+    console.log(e)
+   e.target.id == 'catchPink'
+    ? (html.classList.add('pinkMode'), html.classList.remove('lightMode'))
+    : e.target.id == 'catchWhite'
+        ? (html.classList.add('lightMode'), html.classList.remove('pinkMode'))
+        : (html.classList.remove('lightMode'), html.classList.remove('pinkMode'))
+})
+
+// console.log(hiddenLogos)
+
+// document.querySelector('.catchPink').onclick = () => {
+//     console.log('im tagged')
+//     document.querySelector('html').classList.toggle('lightMode')
+//     document.querySelector('html').classList.remove('pinkMode')
+// }
 
 //Secret Logo Theme Changer
 
+// const popUpIcon = () => {
+//     // const catchMe = document.querySelector('.catchPink')
+//     hiddenLogos.map(x => {
+//     let randomPopUpTime = (Math.floor(Math.random() * 4) * 1000)
+//     let translateX = (Math.floor(Math.random() * 30) - 15) + "rem"
+//     let translateY = (Math.floor(Math.random() * 30) - 15) + "rem"
+
+//     catchMe.style.display = "none"
+//     document.documentElement.style.setProperty("--animationDirectionVertical", translateY)
+//     document.documentElement.style.setProperty("--animationDirectionHorizontal", translateX)
+    
+//     let top = Math.floor(Math.random() * window.innerHeight)
+//     let left = Math.floor(Math.random() * window.innerWidth)
+//     catchMe.style.left = left + "px"
+//     catchMe.style.top = top + "px"
+    
+//     setTimeout(() => {
+//         catchMe.style.display = "block"
+//     }, randomPopUpTime)
+//  })
+// }
+
+// setInterval(() => {
+//     popUpIcon()
+// }, 8000);
+
 const popUpIcon = () => {
-    const catchMe = document.querySelector('.catchMe')
-    let randomPopUpTime = (Math.floor(Math.random() * 4) * 1000)
+    // console.log("popupicon running")
+    // const catchMe = document.querySelector('.catchPink')
+    hiddenLogos.map(x => {
+    const randomPopUpIcon = (x) => {
+        // console.log(x.alt)
+    // let randomPopUpTime = (Math.floor(Math.random() * 4) * 1000)
     let translateX = (Math.floor(Math.random() * 30) - 15) + "rem"
     let translateY = (Math.floor(Math.random() * 30) - 15) + "rem"
+    // console.log(translateX)
+    // console.log(translateY)
 
-    catchMe.style.display = "none"
-    document.documentElement.style.setProperty("--animationDirectionVertical", translateY)
-    document.documentElement.style.setProperty("--animationDirectionHorizontal", translateX)
+    x.style.display = "block"
+    // console.log(x)
+    // console.log("--animationDirectionHorizontal" + x.id)
+    // document.documentElement.style.setProperty("--animationDirectionVertical" + x.id, translateY)
+    // document.documentElement.style.setProperty("--animationDirectionHorizontal" + x.id, translateX)
+    document.documentElement.style.setProperty("--animationDirectionVertical" + x.id, translateY)
+    document.documentElement.style.setProperty("--animationDirectionHorizontal" + x.id, translateX)
     
     let top = Math.floor(Math.random() * window.innerHeight)
     let left = Math.floor(Math.random() * window.innerWidth)
-    catchMe.style.left = left + "px"
-    catchMe.style.top = top + "px"
-    
+
+    // console.log(window.innerWidth)
+    // console.log(window.innerHeight)
+    x.style.left = left + "px"
+    x.style.top = top + "px"
+
+    // let translateX = (window.innerWidth - (window.innerWidth - left))
+    // let translateY = (window.innerHeight - (window.innerWidth - top))
+    // console.log(translateX)
+    // console.log(translateY)    
     setTimeout(() => {
-        catchMe.style.display = "block"
-    }, randomPopUpTime)
+        x.style.display = "none"
+    }, 29750)
+    
+    }
+    randomPopUpIcon(x)
+ })
 }
+
+popUpIcon()
 
 setInterval(() => {
     popUpIcon()
-}, 8000);
+}, 30000);
+
+
+// document.querySelector('.theme').onclick = () => {
+//     document.querySelector('html').classList.toggle('pinkMode')
+//     document.querySelector('html').classList.remove('lightMode')
+// }
