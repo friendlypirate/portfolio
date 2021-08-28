@@ -65,8 +65,8 @@ sections.forEach((x, index) => main.addEventListener('scroll', () => {
     var element = document.querySelector("." + x.id);
     var position = element.getBoundingClientRect();
     console.log(x.id)
-    console.log(position.top, position.bottom, window.innerHeight)
-    if (position.top >= 0 && position.bottom <= window.innerHeight) {
+    console.log(position.top, Math.floor(position.bottom), window.innerHeight)
+    if (position.top >= 0 && Math.floor(position.bottom) <= window.innerHeight) {
         botNavDots.forEach(y => {
             if (y.classList.contains(x.id + 'Nav')) {
                 botNavDots.forEach(z => {
