@@ -64,6 +64,8 @@ sections.forEach((x, index) => main.addEventListener('scroll', () => {
     const botNavDots = document.querySelectorAll('.botNavDots')
     var element = document.querySelector("." + x.id);
     var position = element.getBoundingClientRect();
+    console.log(x.id)
+    console.log(position.top, position.bottom, window.innerHeight)
     if (position.top >= 0 && position.bottom <= window.innerHeight) {
         botNavDots.forEach(y => {
             if (y.classList.contains(x.id + 'Nav')) {
@@ -109,9 +111,7 @@ const hamburger = () => {
     }
     }
 }
-
 hamburger()
-
 
 // Theme Changer
 let hiddenLogos = Array.from(document.querySelectorAll('.catchMe'))
